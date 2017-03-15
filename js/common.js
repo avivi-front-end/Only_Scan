@@ -6,46 +6,37 @@ if(!window.console.error) window.console.error = function() {};
 if(!window.console.info) window.console.info = function() {};
 if(!window.console.log) window.console.log = function() {};
 
-// sticky footer
-//-----------------------------------------------------------------------------
-if(!Modernizr.flexbox) {
-  (function() {
-    var
-      $pageWrapper = $('#page-wrapper'),
-      $pageBody = $('#page-body'),
-      noFlexboxStickyFooter = function() {
-        $pageBody.height('auto');
-        if($pageBody.height() + $('#header').outerHeight() + $('#footer').outerHeight() < $(window).height()) {
-          $pageBody.height($(window).height() - $('#header').outerHeight() - $('#footer').outerHeight());
-        } else {
-          $pageWrapper.height('auto');
-        }
-      };
-    $(window).on('load resize', noFlexboxStickyFooter);
-  })();
-}
-if(ieDetector.ieVersion == 10 || ieDetector.ieVersion == 11) {
-  (function(){
-    var
-      $pageWrapper = $('#page-wrapper'),
-      $pageBody = $('#page-body'),
-      ieFlexboxFix = function() {
-        if($pageBody.addClass('flex-none').height() + $('#header').outerHeight() + $('#footer').outerHeight() < $(window).height()) {
-          $pageWrapper.height($(window).height());
-          $pageBody.removeClass('flex-none');
-        } else {
-          $pageWrapper.height('auto');
-        }
-      };
-    ieFlexboxFix();
-    $(window).on('load resize', ieFlexboxFix);
-  })();
-}
 
 $(function() {
+    $('input[placeholder], textarea[placeholder]').placeholder();
+    var quote_option = {
+        dots: false,
+        fade: true,
+        infinite: true
+    };
+    $('.js-quote-init').slick(quote_option);
+    var fackt_slider_nav_option = {
+        dots: false,
+        fade: true,
+        asNavFor: '.js-fackt-slider-date',
+        infinite: true
+    };
+    $('.js-fackt-slider-nav').slick(fackt_slider_nav_option);
 
-// placeholder
-//-----------------------------------------------------------------------------
-  $('input[placeholder], textarea[placeholder]').placeholder();
+    var fackt_slider_date_option = {
+        dots: false,
+        fade: true,
+        arrows: false,
+        asNavFor: '.js-fackt-slider-nav',
+        infinite: true
+    };
+    $('.js-fackt-slider-date').slick(fackt_slider_date_option);
 
+    $('.js-client-hover').hover(function () {
+        var src = $(this).data('color');
+        $(this).attr('src',src)
+    }, function () {
+        var src = $(this).data('src');
+        $(this).attr('src',src)
+    })
 });

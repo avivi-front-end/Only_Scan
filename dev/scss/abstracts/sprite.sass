@@ -1,120 +1,204 @@
-/*
-  SASS variables are information about icon's compiled state, stored under its original file name
-
-  .icon-home
-    width: $icon-home-width
-
-  The large array-like variables contain all information about a single icon
-  $icon-home: x y offset_x offset_y width height total_width total_height image_path
-
-  At the bottom of this section, we provide information about the spritesheet itself
-  $spritesheet: width height image $spritesheet-sprites
-  */
-$close-bt-name: 'close-bt'
-$close-bt-x: 142px
-$close-bt-y: 64px
-$close-bt-offset-x: -142px
-$close-bt-offset-y: -64px
-$close-bt-width: 10px
-$close-bt-height: 10px
-$close-bt-total-width: 192px
-$close-bt-total-height: 128px
-$close-bt-image: 'sprite.png'
-$close-bt: (142px, 64px, -142px, -64px, 10px, 10px, 192px, 128px, 'sprite.png', 'close-bt', )
-$facebook-name: 'facebook'
-$facebook-x: 0px
-$facebook-y: 0px
-$facebook-offset-x: 0px
-$facebook-offset-y: 0px
-$facebook-width: 64px
-$facebook-height: 64px
-$facebook-total-width: 192px
-$facebook-total-height: 128px
-$facebook-image: 'sprite.png'
-$facebook: (0px, 0px, 0px, 0px, 64px, 64px, 192px, 128px, 'sprite.png', 'facebook', )
-$google-plus-name: 'google-plus'
-$google-plus-x: 64px
-$google-plus-y: 0px
-$google-plus-offset-x: -64px
-$google-plus-offset-y: 0px
-$google-plus-width: 64px
-$google-plus-height: 64px
-$google-plus-total-width: 192px
-$google-plus-total-height: 128px
-$google-plus-image: 'sprite.png'
-$google-plus: (64px, 0px, -64px, 0px, 64px, 64px, 192px, 128px, 'sprite.png', 'google-plus', )
-$instagram-name: 'instagram'
-$instagram-x: 0px
-$instagram-y: 64px
-$instagram-offset-x: 0px
-$instagram-offset-y: -64px
-$instagram-width: 64px
-$instagram-height: 64px
-$instagram-total-width: 192px
-$instagram-total-height: 128px
-$instagram-image: 'sprite.png'
-$instagram: (0px, 64px, 0px, -64px, 64px, 64px, 192px, 128px, 'sprite.png', 'instagram', )
-$linkedin-name: 'linkedin'
-$linkedin-x: 64px
-$linkedin-y: 64px
-$linkedin-offset-x: -64px
-$linkedin-offset-y: -64px
-$linkedin-width: 64px
-$linkedin-height: 64px
-$linkedin-total-width: 192px
-$linkedin-total-height: 128px
-$linkedin-image: 'sprite.png'
-$linkedin: (64px, 64px, -64px, -64px, 64px, 64px, 192px, 128px, 'sprite.png', 'linkedin', )
-$lupa-bg-name: 'lupa-bg'
-$lupa-bg-x: 128px
-$lupa-bg-y: 64px
-$lupa-bg-offset-x: -128px
-$lupa-bg-offset-y: -64px
-$lupa-bg-width: 14px
-$lupa-bg-height: 15px
-$lupa-bg-total-width: 192px
-$lupa-bg-total-height: 128px
-$lupa-bg-image: 'sprite.png'
-$lupa-bg: (128px, 64px, -128px, -64px, 14px, 15px, 192px, 128px, 'sprite.png', 'lupa-bg', )
-$twitter-name: 'twitter'
-$twitter-x: 128px
-$twitter-y: 0px
-$twitter-offset-x: -128px
-$twitter-offset-y: 0px
-$twitter-width: 64px
-$twitter-height: 64px
-$twitter-total-width: 192px
-$twitter-total-height: 128px
-$twitter-image: 'sprite.png'
-$twitter: (128px, 0px, -128px, 0px, 64px, 64px, 192px, 128px, 'sprite.png', 'twitter', )
-$spritesheet-width: 192px
-$spritesheet-height: 128px
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$fackt-next-hover-name: 'fackt-next-hover'
+$fackt-next-hover-x: 138px
+$fackt-next-hover-y: 62px
+$fackt-next-hover-offset-x: -138px
+$fackt-next-hover-offset-y: -62px
+$fackt-next-hover-width: 16px
+$fackt-next-hover-height: 31px
+$fackt-next-hover-total-width: 154px
+$fackt-next-hover-total-height: 132px
+$fackt-next-hover-image: 'sprite.png'
+$fackt-next-hover: (138px, 62px, -138px, -62px, 16px, 31px, 154px, 132px, 'sprite.png', 'fackt-next-hover', )
+$fackt-next-name: 'fackt-next'
+$fackt-next-x: 116px
+$fackt-next-y: 76px
+$fackt-next-offset-x: -116px
+$fackt-next-offset-y: -76px
+$fackt-next-width: 16px
+$fackt-next-height: 31px
+$fackt-next-total-width: 154px
+$fackt-next-total-height: 132px
+$fackt-next-image: 'sprite.png'
+$fackt-next: (116px, 76px, -116px, -76px, 16px, 31px, 154px, 132px, 'sprite.png', 'fackt-next', )
+$fackt-prev-hover-name: 'fackt-prev-hover'
+$fackt-prev-hover-x: 138px
+$fackt-prev-hover-y: 31px
+$fackt-prev-hover-offset-x: -138px
+$fackt-prev-hover-offset-y: -31px
+$fackt-prev-hover-width: 16px
+$fackt-prev-hover-height: 31px
+$fackt-prev-hover-total-width: 154px
+$fackt-prev-hover-total-height: 132px
+$fackt-prev-hover-image: 'sprite.png'
+$fackt-prev-hover: (138px, 31px, -138px, -31px, 16px, 31px, 154px, 132px, 'sprite.png', 'fackt-prev-hover', )
+$fackt-prev-name: 'fackt-prev'
+$fackt-prev-x: 138px
+$fackt-prev-y: 0px
+$fackt-prev-offset-x: -138px
+$fackt-prev-offset-y: 0px
+$fackt-prev-width: 16px
+$fackt-prev-height: 31px
+$fackt-prev-total-width: 154px
+$fackt-prev-total-height: 132px
+$fackt-prev-image: 'sprite.png'
+$fackt-prev: (138px, 0px, -138px, 0px, 16px, 31px, 154px, 132px, 'sprite.png', 'fackt-prev', )
+$fb-s-name: 'fb-s'
+$fb-s-x: 0px
+$fb-s-y: 108px
+$fb-s-offset-x: 0px
+$fb-s-offset-y: -108px
+$fb-s-width: 24px
+$fb-s-height: 24px
+$fb-s-total-width: 154px
+$fb-s-total-height: 132px
+$fb-s-image: 'sprite.png'
+$fb-s: (0px, 108px, 0px, -108px, 24px, 24px, 154px, 132px, 'sprite.png', 'fb-s', )
+$lupa-black-name: 'lupa-black'
+$lupa-black-x: 59px
+$lupa-black-y: 0px
+$lupa-black-offset-x: -59px
+$lupa-black-offset-y: 0px
+$lupa-black-width: 57px
+$lupa-black-height: 57px
+$lupa-black-total-width: 154px
+$lupa-black-total-height: 132px
+$lupa-black-image: 'sprite.png'
+$lupa-black: (59px, 0px, -59px, 0px, 57px, 57px, 154px, 132px, 'sprite.png', 'lupa-black', )
+$lupa-name: 'lupa'
+$lupa-x: 72px
+$lupa-y: 108px
+$lupa-offset-x: -72px
+$lupa-offset-y: -108px
+$lupa-width: 21px
+$lupa-height: 21px
+$lupa-total-width: 154px
+$lupa-total-height: 132px
+$lupa-image: 'sprite.png'
+$lupa: (72px, 108px, -72px, -108px, 21px, 21px, 154px, 132px, 'sprite.png', 'lupa', )
+$next-quote-hover-name: 'next-quote-hover'
+$next-quote-hover-x: 59px
+$next-quote-hover-y: 58px
+$next-quote-hover-offset-x: -59px
+$next-quote-hover-offset-y: -58px
+$next-quote-hover-width: 22px
+$next-quote-hover-height: 38px
+$next-quote-hover-total-width: 154px
+$next-quote-hover-total-height: 132px
+$next-quote-hover-image: 'sprite.png'
+$next-quote-hover: (59px, 58px, -59px, -58px, 22px, 38px, 154px, 132px, 'sprite.png', 'next-quote-hover', )
+$next-quote-name: 'next-quote'
+$next-quote-x: 116px
+$next-quote-y: 38px
+$next-quote-offset-x: -116px
+$next-quote-offset-y: -38px
+$next-quote-width: 22px
+$next-quote-height: 38px
+$next-quote-total-width: 154px
+$next-quote-total-height: 132px
+$next-quote-image: 'sprite.png'
+$next-quote: (116px, 38px, -116px, -38px, 22px, 38px, 154px, 132px, 'sprite.png', 'next-quote', )
+$plus-icon-name: 'plus-icon'
+$plus-icon-x: 0px
+$plus-icon-y: 0px
+$plus-icon-offset-x: 0px
+$plus-icon-offset-y: 0px
+$plus-icon-width: 59px
+$plus-icon-height: 58px
+$plus-icon-total-width: 154px
+$plus-icon-total-height: 132px
+$plus-icon-image: 'sprite.png'
+$plus-icon: (0px, 0px, 0px, 0px, 59px, 58px, 154px, 132px, 'sprite.png', 'plus-icon', )
+$prev-quote-hover-name: 'prev-quote-hover'
+$prev-quote-hover-x: 116px
+$prev-quote-hover-y: 0px
+$prev-quote-hover-offset-x: -116px
+$prev-quote-hover-offset-y: 0px
+$prev-quote-hover-width: 22px
+$prev-quote-hover-height: 38px
+$prev-quote-hover-total-width: 154px
+$prev-quote-hover-total-height: 132px
+$prev-quote-hover-image: 'sprite.png'
+$prev-quote-hover: (116px, 0px, -116px, 0px, 22px, 38px, 154px, 132px, 'sprite.png', 'prev-quote-hover', )
+$prev-quote-name: 'prev-quote'
+$prev-quote-x: 81px
+$prev-quote-y: 58px
+$prev-quote-offset-x: -81px
+$prev-quote-offset-y: -58px
+$prev-quote-width: 22px
+$prev-quote-height: 38px
+$prev-quote-total-width: 154px
+$prev-quote-total-height: 132px
+$prev-quote-image: 'sprite.png'
+$prev-quote: (81px, 58px, -81px, -58px, 22px, 38px, 154px, 132px, 'sprite.png', 'prev-quote', )
+$ravno-icon-name: 'ravno-icon'
+$ravno-icon-x: 0px
+$ravno-icon-y: 58px
+$ravno-icon-offset-x: 0px
+$ravno-icon-offset-y: -58px
+$ravno-icon-width: 59px
+$ravno-icon-height: 50px
+$ravno-icon-total-width: 154px
+$ravno-icon-total-height: 132px
+$ravno-icon-image: 'sprite.png'
+$ravno-icon: (0px, 58px, 0px, -58px, 59px, 50px, 154px, 132px, 'sprite.png', 'ravno-icon', )
+$tw-s-name: 'tw-s'
+$tw-s-x: 24px
+$tw-s-y: 108px
+$tw-s-offset-x: -24px
+$tw-s-offset-y: -108px
+$tw-s-width: 24px
+$tw-s-height: 24px
+$tw-s-total-width: 154px
+$tw-s-total-height: 132px
+$tw-s-image: 'sprite.png'
+$tw-s: (24px, 108px, -24px, -108px, 24px, 24px, 154px, 132px, 'sprite.png', 'tw-s', )
+$vk-s-name: 'vk-s'
+$vk-s-x: 48px
+$vk-s-y: 108px
+$vk-s-offset-x: -48px
+$vk-s-offset-y: -108px
+$vk-s-width: 24px
+$vk-s-height: 24px
+$vk-s-total-width: 154px
+$vk-s-total-height: 132px
+$vk-s-image: 'sprite.png'
+$vk-s: (48px, 108px, -48px, -108px, 24px, 24px, 154px, 132px, 'sprite.png', 'vk-s', )
+$spritesheet-width: 154px
+$spritesheet-height: 132px
 $spritesheet-image: 'sprite.png'
-$spritesheet-sprites: ($close-bt, $facebook, $google-plus, $instagram, $linkedin, $lupa-bg, $twitter, )
-$spritesheet: (192px, 128px, 'sprite.png', $spritesheet-sprites, )
+$spritesheet-sprites: ($fackt-next-hover, $fackt-next, $fackt-prev-hover, $fackt-prev, $fb-s, $lupa-black, $lupa, $next-quote-hover, $next-quote, $plus-icon, $prev-quote-hover, $prev-quote, $ravno-icon, $tw-s, $vk-s, )
+$spritesheet: (154px, 132px, 'sprite.png', $spritesheet-sprites, )
 
-/*
-  The provided mixins are intended to be used with the array-like variables
-
-  .icon-home
-    @include sprite-width($icon-home)
-
-  .icon-email
-    @include sprite($icon-email)
-
-  Example usage in HTML:
-    `display: block` sprite:
-    <div class="icon-home"></div>
-
-  To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-    // CSS
-    .icon {
-      display: inline-block;
-    }
-
-    // HTML
-    <i class="icon icon-home"></i>
-  */
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
 @mixin sprite-width($sprite)
   width: nth($sprite, 5)
 
@@ -136,12 +220,10 @@ $spritesheet: (192px, 128px, 'sprite.png', $spritesheet-sprites, )
   @include sprite-width($sprite)
   @include sprite-height($sprite)
 
-/*
-  The `sprites` mixin generates identical output to the CSS template
-    but can be overridden inside of SASS
-
-  @include sprites($spritesheet-sprites)
-  */
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
 @mixin sprites($sprites)
   @each $sprite in $sprites
     $sprite-name: nth($sprite, 10)

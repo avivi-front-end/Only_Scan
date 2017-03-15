@@ -1,7 +1,6 @@
 //*********************************************
-@import 'bourbon';
-//*********************************************
 @import 'base/reset';
+@import 'base/fonts';
 //*********************************************
 @import 'abstracts/variables';
 @import 'abstracts/clearfix';
@@ -10,5 +9,4 @@
 @import 'abstracts/grid-mixin';
 @import 'abstracts/structure';
 @import 'abstracts/grid';
-@import 'abstracts/glyphicons';
 //*********************************************

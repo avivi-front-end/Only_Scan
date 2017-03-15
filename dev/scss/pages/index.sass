@@ -1,2 +1,1149 @@
-.index 
-	background-attachment: scroll	
+.quote-form
+  padding-top: 5px
+  padding-bottom: 100px
+.quote-slider
+  position: relative
+  .slick-arrow
+    display: inline-block
+    position: absolute
+    top: 142px
+    left: 362px
+    z-index: 1000
+    border: none
+    background: none
+    cursor: pointer
+    text-indent: -9999px
+    &.slick-prev
+      @include sprite($prev-quote)
+      &:hover
+        @include sprite($prev-quote-hover)
+    &.slick-next
+      @include sprite($next-quote)
+      left: 423px
+      &:hover
+        @include sprite($next-quote-hover)
+
+  &__item
+    float: left
+    &-title
+      padding-top: 14px
+      line-height: 50px
+      position: relative
+      font-family: 'DIN Pro Cond'
+      font-weight: 900
+      font-size: 40px
+      color: #000000
+      text-transform: uppercase
+      padding-left: 20px
+      font-style: normal
+      span
+        position: relative
+        z-index: 1
+      &:before
+        content: '“'
+        font-family: 'Geneva'
+        color: #dcdcdc
+        position: absolute
+        left: 0
+        top: 10px
+        z-index: 0
+        font-weight: normal
+        font-style: normal
+        font-size: 120px
+        line-height: 100px
+    &-soc-autor
+      padding-top: 8px
+      ul
+        display: block
+        padding-left: 2px
+        li
+          float: left
+          padding-left: 17px
+          display: block
+          a
+            display: inline-block
+            &.vk
+              @include sprite($vk-s)
+            &.fb
+              @include sprite($fb-s)
+            &.tw
+              @include sprite($tw-s)
+      .autor
+        font-size: 20px
+        font-family: 'DIN Pro Cond'
+        font-weight: 500
+        float: right
+        padding-right: 110px
+        font-style: normal
+
+.form-phone
+  margin-top: 37px
+  margin-left: 5px
+  background: #417538
+  padding: 5px
+  border-radius: 3px
+  &__inner
+    color: #000000
+    background: url(../images/main-bg.jpg) center top
+    padding: 17px 35px 30px 43px
+    &:after
+      content: ''
+      display: table
+      clear: both
+  &__title
+    font-size: 50px
+    width: 210px
+    letter-spacing: -1.2px
+    float: left
+    line-height: 60px
+    color: #000000
+    font-family: 'DIN Pro Cond'
+    font-weight: 900
+    font-style: normal
+    text-transform: uppercase
+  &__phone
+    float: left
+    &-title
+      padding-top: 21px
+      letter-spacing: 0.1px
+      font-family: 'DIN Pro Cond'
+      font-weight: 500
+      font-style: normal
+      font-size: 20px
+      padding-bottom: 8px
+    input
+      font-family: 'DIN Pro Cond'
+      font-weight: 500
+      font-style: normal
+      font-size: 20px
+      color: #000000
+      margin-left: 1px
+      width: 244px
+      height: 45px
+      padding-left: 10px
+      padding-right: 10px
+      background: none
+      border: #000 solid 2px
+  &__botton
+    clear: both
+    padding-top: 19px
+    padding-right: 5px
+  .btn-free
+    display: inline-block
+    width: 250px
+    height: 60px
+    color: #ffffff
+    font-family: 'DIN Pro Cond'
+    font-weight: bold
+    font-size: 22px
+    border: none
+    text-transform: uppercase
+    background: #417538
+  .btn-demo
+    display: inline-block
+    width: 180px
+    float: right
+    height: 60px
+    color: #ffffff
+    font-family: 'DIN Pro Cond'
+    font-weight: bold
+    font-size: 22px
+    border: none
+    text-transform: uppercase
+    background: #000000
+
+.whatit
+  background: #ffffff
+  .container
+    min-height: 515px
+    background: url(../images/whatit-pic.jpg) no-repeat 98% bottom
+  &__title
+    font-family: 'DIN Pro Cond'
+    font-weight: 900
+    font-style: normal
+    font-size: 65px
+    color: #000000
+    line-height: 81.42px
+    text-transform: uppercase
+    padding-top: 89px
+  &__info
+    font-size: 25px
+    line-height: 35px
+    padding-top: 13px
+    color: #7b7b7b
+    font-family: 'DIN Pro Cond'
+  &__slogan
+    padding-top: 34px
+    font-family: 'DIN Pro Cond'
+    font-weight: bold
+    font-style: normal
+    font-size: 35px
+    line-height: 45px
+    text-transform: uppercase
+    color: #417538
+    background: url("../images/whatit-slogan.png") no-repeat 97.4% 106%
+
+.searchblock
+  padding: 99px 0
+  &__item
+    background: #000000
+    height: 406px
+    padding: 0 20px
+    &-title
+      font-size: 45px
+      line-height: 46px
+      font-family: 'DIN Pro Cond'
+      font-weight: 900
+      color: #ffffff
+      text-align: center
+      text-transform: uppercase
+      padding-top: 21px
+      letter-spacing: 1.6px
+    &-title-soc
+      font-size: 20px
+      text-transform: uppercase
+      color: #ffffff
+      font-weight: 900
+      margin-top: -6px
+    &-info
+      font-size: 25px
+      padding-bottom: 25px
+      letter-spacing: 1px
+      color: #ffffff
+      text-align: center
+  &__inputsearch
+    height: 40px
+    background: #ffffff
+    padding: 0 10px
+    line-height: 40px
+    font-size: 18px
+    color: #000000
+    font-family: 'DIN Pro Cond'
+    font-weight: 500
+    margin-bottom: 15px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      right: 9px
+      top: 10px
+      display: inline-block
+      @include sprite($lupa)
+  &__target
+    text-align: center
+    padding-top: 16px
+    padding-bottom: 38px
+  &__big-letter
+    font-family: 'DIN Pro Cond'
+    font-weight: 500
+    font-size: 18px
+    line-height: 25px
+    color: #ffffff
+    display: table
+    margin: 0
+    span
+      text-transform: uppercase
+      text-align: left
+      display: table-cell
+      vertical-align: top
+      padding-top: 9px
+      &.big
+        padding-top: 0
+        font-weight: 900
+        font-size: 120px
+        line-height: 87px
+        letter-spacing: 8px
+  &__soc_list
+    display: block
+    overflow: hidden
+    padding-top: 13px
+    padding-bottom: 5px
+    li
+      list-style: none
+      float: left
+      display: block
+      width: 25%
+      text-align: center
+      padding-bottom: 25px
+      &:nth-child(4n)
+        text-align: right
+      &:nth-child(1), &:nth-child(4n+1)
+        text-align: left
+  &__plosh_list
+    display: block
+    overflow: hidden
+    padding-top: 13px
+    padding-bottom: 16px
+    li
+      list-style: none
+      display: block
+      float: left
+      font-weight: 500
+      font-size: 18px
+      color: #ffffff
+      &:nth-child(1)
+        width: 90px
+      &:nth-child(2)
+        width: 105px
+
+.example
+  background: #ffffff
+  padding-top: 98px
+  padding-bottom: 94px
+  &__title
+    font-size: 65px
+    line-height: 65px
+    font-family: 'DIN Pro Cond'
+    font-weight: 900
+    color: #000
+    text-align: center
+    text-transform: uppercase
+    letter-spacing: -0.1px
+    padding-bottom: 43px
+  &__item
+    &-img
+      display: block
+      margin-bottom: 7px
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        display: block
+        background: url(../images/exampl-hover-bg.png)
+        opacity: 0
+        transition: opacity 0.3s ease-out 0.1s
+      &:after
+        content: ''
+        display: inline-block
+        +block-center
+        opacity: 0
+        @include sprite($lupa-black)
+        transition: opacity 0.3s ease-out 0.1s
+      &:hover:before
+        opacity: 0.9
+      &:hover:after
+        opacity: 1
+    &-url
+      font-weight: 500
+      font-size: 25px
+      letter-spacing: 0.2px
+      color: #417538
+      text-decoration: none
+      text-transform: uppercase
+
+.whatfor
+  padding-top: 89px
+  padding-bottom: 15px
+  &__title
+    font-size: 65px
+    line-height: 65px
+    font-family: 'DIN Pro Cond'
+    font-weight: 900
+    color: #000
+    text-align: center
+    text-transform: uppercase
+    letter-spacing: -0.1px
+    padding-bottom: 43px
+  &__item
+    display: table
+    margin: 0
+    min-height: 188px
+    &-td
+      display: table-cell
+      text-transform: uppercase
+      vertical-align: top
+      font-weight: 500
+      color: #000000
+      font-size: 25px
+      line-height: 36px
+      &_td_number
+        text-indent: -10px
+        font-size: 150px
+        line-height: 100px
+        color: #417538
+        font-weight: 900
+        letter-spacing: 6px
+    &-icon
+      display: block
+      height: 45px
+
+.tank
+  background: #000000
+  padding-top: 60px
+  padding-bottom: 40px
+  &__slogan
+    padding-left: 263px
+    font-weight: 500
+    color: #ffffff
+    padding-top: 47px
+    font-size: 30px
+    line-height: 51px
+    background: url(../images/tank.png) no-repeat left top
+    letter-spacing: -0.2px
+    &-title
+      font-family: 'DIN Pro'
+      font-weight: 900
+      font-size: 40px
+
+.big_zoom
+  font-family: 'DIN Pro Cond'
+  background: #ffffff
+  padding-top: 100px
+  padding-bottom: 109px
+  &__title
+    padding-left: 47px
+    text-transform: uppercase
+    &-big
+      font-size: 125px
+      line-height: 100px
+      color: #000000
+      font-weight: 900
+      float: left
+    &-right
+      float: left
+      padding-left: 15px
+      font-weight: bold
+      font-size: 40px
+      line-height: 53px
+      span
+        color: #417538
+    &-small
+      clear: both
+      padding-left: 5px
+      font-size: 16.36px
+      font-weight: 500
+      padding-top: 8px
+      letter-spacing: 0.2px
+      
+.form_block
+  font-family: 'DIN Pro Cond'
+  background: url(../images/form-bg.jpg) no-repeat center
+  padding-top: 98px
+  padding-bottom: 103px
+  &__title
+    text-transform: uppercase
+    font-size: 65px
+    line-height: 65px
+    text-align: center
+    color: #ffffff
+    font-weight: 900
+    padding-bottom: 19px
+  &__desc
+    text-transform: uppercase
+    color: #ffffff
+    font-weight: 500
+    text-align: center
+    font-size: 30px
+    line-height: 30px
+  &.foot
+    background: url(../images/foot-bg.jpg) no-repeat top
+    padding-top: 97px
+    .form_block__desc
+      line-height: 44px
+    .form_block__title
+      padding-bottom: 11px
+    .form_block__row
+      padding-top: 20px
+  &__row
+    text-align: center
+    padding-top: 27px
+    input
+      font-family: 'DIN Pro Cond'
+      display: inline-block
+      width: 320px
+      height: 40px
+      color: #000000
+      font-size: 18px
+      font-weight: 500
+      background: #ffffff
+      padding-left: 10px
+      padding-right: 10px
+      margin-left: 10px
+      margin-right: 10px
+      border: #fff solid 1px
+  &__row_submit
+    text-align: center
+    padding-top: 21px
+    input
+      font-family: 'DIN Pro Cond'
+      min-width: 230px
+      padding-left: 35px
+      padding-right: 35px
+      height: 50px
+      background: #417538
+      border: #417538 solid 1px
+      text-align: center
+      font-weight: bold
+      color: #ffffff
+      text-transform: uppercase
+      font-size: 22px
+
+.for_whom
+  font-family: 'DIN Pro Cond'
+  padding-top: 87px
+  padding-bottom: 83px
+  &__title
+    font-family: 'DIN Pro Cond'
+    font-size: 65px
+    letter-spacing: -0.3px
+    line-height: 65px
+    text-align: center
+    font-weight: 900
+    padding-bottom: 110px
+    &-but
+      padding-bottom: 0
+      font-size: 115px
+      line-height: 125px
+      letter-spacing: -0.3px
+      font-weight: 900
+      padding-top: 55px
+      margin-left: -5px
+  &__item
+    display: table
+    width: 100%
+    &-td
+      float: none
+      height: 435px
+      vertical-align: middle
+      display: table-cell
+    &-title
+      font-weight: 900
+      text-transform: uppercase
+      color: #000000
+      font-size: 40px
+    &-desc
+      font-weight: 500
+      color: #7b7b7b
+      font-size: 30px
+      line-height: 45px
+.special
+  background: #ffffff
+  padding-top: 85px
+  padding-bottom: 101px
+  &__title
+    letter-spacing: -0.1px
+    font-size: 40px
+    line-height: 60px
+    font-weight: 900
+    text-transform: uppercase
+    text-align: center
+    padding-bottom: 55px
+
+.circle-block
+  height: 855px
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 170px
+    height: 107px
+    transform: translate(-67px, -17px)
+    display: inline-block
+    background: url(../images/center-logo.png) no-repeat center
+  &__item
+    position: absolute
+    display: inline-block
+    text-align: center
+    background: #000000
+    border-radius: 50%
+    color: #ffffff
+    font-weight: 900
+    font-size: 32px
+    line-height: 38px
+    text-transform: uppercase
+    &:after
+      content: ''
+      display: inline-block
+      background: #000
+      height: 1px
+      position: absolute
+      left: 50%
+      top: 50%
+      z-index: 1
+    &:before
+      content: ''
+      display: inline-block
+      background: #000
+      height: 1px
+      position: absolute
+      left: 50%
+      top: 50%
+      z-index: 1
+    span
+      +block-center
+      z-index: 2
+    &.c1
+      top: 0
+      left: 355px
+      height: 142px
+      width: 142px
+      &:after
+        width: 100%
+        transform: rotate(50deg)
+        transform-origin: 0 0
+      &:before
+        width: 100%
+        transform: rotate(102deg)
+        transform-origin: 0 0
+    &.c2
+      top: 38px
+      font-size: 38px
+      left: 620px
+      height: 101px
+      width: 101px
+      &:after
+        width: 120%
+        transform: rotate(71deg)
+        transform-origin: 0 -19px
+      &:before
+        width: 140%
+        transform: rotate(137deg)
+        transform-origin: 0 0
+    &.c3
+      top: 168px
+      left: 369px
+      height: 54px
+      width: 54px
+      &:after
+        width: 220%
+        transform: rotate(66deg)
+        transform-origin: 0 0
+      &:before
+        width: 170%
+        transform: rotate(140deg)
+        transform-origin: -5px 0
+    &.c4
+      font-size: 26px
+      top: 139px
+      left: 473px
+      height: 142px
+      width: 142px
+      &:after
+        width: 100%
+        transform: rotate(13deg)
+        transform-origin: 0 0
+      &:before
+        width: 100%
+        transform: rotate(122deg)
+        transform-origin: -6px 0
+    &.c5
+      font-size: 38px
+      top: 182px
+      left: 642px
+      height: 130px
+      width: 130px
+      &:after
+        width: 100%
+        transform: rotate(42deg)
+        transform-origin: 0 0
+      &:before
+        width: 200%
+        transform: rotate(159deg)
+        transform-origin: 22px 0
+    &.c6
+      font-size: 26px
+      top: 103px
+      left: 820px
+      height: 142px
+      width: 142px
+      &:after
+        width: 150%
+        transform: rotate(-157deg)
+        transform-origin: 0 0
+      &:before
+        width: 100%
+        transform: rotate(159deg)
+        transform-origin: 3px 3px
+
+    &.c7
+      font-size: 39px
+      top: 220px
+      left: 185px
+      height: 155px
+      width: 155px
+    &.c8
+      font-size: 26px
+      line-height: 32px
+      top: 290px
+      left: 414px
+      height: 100px
+      width: 100px
+    &.c9
+      font-size: 29px
+      line-height: 32px
+      top: 430px
+      left: 50px
+      height: 155px
+      width: 155px
+      &:after
+        width: 120%
+        transform: rotate(-55deg)
+        transform-origin: 0 0
+      &:before
+        width: 130%
+        transform: rotate(-16deg)
+        transform-origin: 29px 3px
+    &.c10
+      font-size: 29px
+      top: 390px
+      left: 292px
+      height: 130px
+      width: 130px
+      &:after
+        width: 100%
+        transform: rotate(-45deg)
+        transform-origin: 0 0
+      &:before
+        width: 100%
+        transform: rotate(87deg)
+        transform-origin: 0 0
+    &.c11
+      font-size: 30px
+      left: 772px
+      top: 312px
+      height: 155px
+      width: 155px
+      &:after
+        width: 100%
+        transform: rotate(-78deg)
+        transform-origin: 0 0
+      &:before
+        width: 100%
+        transform: rotate(124deg)
+        transform-origin: 0 0
+    &.c12
+      font-size: 32px
+      left: 960px
+      top: 400px
+      height: 130px
+      width: 130px
+      &:after
+        width: 200%
+        transform: rotate(-113deg)
+        transform-origin: 1px -4px
+      &:before
+        width: 100%
+        transform: rotate(201deg)
+        transform-origin: 0 0
+    &.c13
+      font-size: 26px
+      left: 295px
+      top: 544px
+      height: 155px
+      width: 155px
+      &:after
+        width: 100%
+        transform: rotate(5deg)
+        transform-origin: 102px 0
+      &:before
+        width: 100%
+        transform: rotate(52deg)
+        transform-origin: 0 0
+    &.c14
+      font-size: 26px
+      left: 696px
+      top: 482px
+      height: 100px
+      width: 100px
+      &:after
+        width: 130%
+        transform: rotate(27deg)
+        transform-origin: 0 0
+      &:before
+        width: 100%
+        transform: rotate(96deg)
+        transform-origin: 0 0
+    &.c15
+      font-size: 32px
+      left: 835px
+      top: 533px
+      height: 155px
+      width: 155px
+      &:after
+        width: 100%
+        transform: rotate(-50deg)
+        transform-origin: 0 0
+    &.c16
+      font-size: 26px
+      left: 525px
+      top: 596px
+      height: 89px
+      width: 89px
+      &:after
+        width: 200%
+        transform: rotate(-33deg)
+        transform-origin: 0 0
+    &.c17
+      font-size: 26px
+      line-height: 32px
+      left: 433px
+      top: 722px
+      height: 133px
+      width: 133px
+      &:after
+        width: 100%
+        transform: rotate(-64deg)
+        transform-origin: 0 0
+    &.c18
+      font-size: 30px
+      line-height: 40px
+      left: 654px
+      top: 623px
+      height: 145px
+      width: 145px
+      &:after
+        width: 100%
+        transform: rotate(-161deg)
+        transform-origin: 0 0
+
+.why_block
+  padding-top: 90px
+  padding-bottom: 100px
+  &__title
+    font-family: 'DIN Pro Cond'
+    font-size: 65px
+    letter-spacing: -0.3px
+    line-height: 65px
+    text-align: center
+    font-weight: 900
+    text-transform: uppercase
+    padding-bottom: 31px
+  &__title-h3
+    font-size: 40px
+    color: #000000
+    font-weight: 900
+    text-transform: uppercase
+    padding-bottom: 15px
+  &__title-h4
+    font-size: 30px
+    color: #417538
+    font-weight: 900
+    text-transform: uppercase
+    padding-bottom: 21px
+  &__right
+    padding-left: 41px
+  &__snas
+    width: 341px
+    float: left
+    p
+      font-size: 25px
+      color: #000000
+      font-weight: 500
+      padding-bottom: 20px
+  &__svas
+    p
+      font-size: 25px
+      color: #000000
+      font-weight: 500
+      padding-bottom: 20px
+  &__table-lid
+    td
+      border-bottom: #000 solid 1px
+      font-weight: 500
+      font-size: 25px
+      color: #000000
+      text-align: center
+      vertical-align: middle
+      letter-spacing: -0.2px
+    thead
+      .why_block__title-h4
+        padding-bottom: 0
+      td
+        padding-bottom: 11px
+    tr
+      td:nth-child(1)
+        width: 80px
+      td:nth-child(2)
+        width: 266px
+    tbody
+      td
+        padding-top: 13px
+        padding-bottom: 19px
+    tfoot
+      td
+        padding-top: 13px
+        padding-bottom: 19px
+        color: #417538
+        font-size: 25px
+        &:nth-child(1)
+          letter-spacing: -1px
+  &__easier
+    padding-top: 37px
+    padding-bottom: 45px
+    .why_block__title-h4
+      padding-bottom: 2px
+    p
+      font-size: 25px
+      color: #000000
+      font-weight: 500
+      padding-bottom: 20px
+    &_bl1
+      width: 283px
+      float: left
+    &_bl2
+      padding-top: 35px
+      width: 370px
+      float: left
+    &_bl3
+      padding-top: 35px
+      width: 294px
+      float: left
+    &_bl4
+      float: left
+  &__serv-list
+    padding-top: 28px
+  &__serv-item
+    font-weight: 900
+    font-size: 30px
+    line-height: 40px
+    text-align: center
+    text-transform: uppercase
+    &-img
+      padding-bottom: 20px
+    &.left
+      padding-right: 60px
+    &.right
+      letter-spacing: -0.1px
+      padding-left: 40px
+    &.center
+      padding-right: 33px
+
+.fackti-block
+  background: #ffffff
+  padding-top: 100px
+  padding-bottom: 90px
+  &__title
+    font-family: 'DIN Pro Cond'
+    font-size: 65px
+    letter-spacing: -0.3px
+    line-height: 65px
+    text-align: center
+    font-weight: 900
+    text-transform: uppercase
+    padding-bottom: 27px
+  &__slider-nav
+    overflow: hidden
+    position: relative
+    text-align: center
+    .slick-track
+      width: auto !important
+    .slick-list
+      display: inline-block
+    div.slick-slide
+      display: none
+      &.slick-current.slick-active
+        display: inline-block
+        left: auto !important
+        top: auto !important
+        width: auto !important
+    .slick-arrow
+      border: none
+      background: none
+      cursor: pointer
+      text-indent: -9999px
+      transform: translateY(-11px)
+      display: inline-block
+      &.slick-prev
+        @include sprite($fackt-prev)
+      &.slick-next
+        transform: translate(-6px, -11px)
+        @include sprite($fackt-next)
+  &__slider-but
+    padding-top: 39px
+    overflow: hidden
+  &__item-date
+    float: left
+    text-align: center
+    &-no
+      padding-right: 45px
+    &-yes
+      padding-left: 45px
+    &-img
+      height: 87px
+    &-title
+      font-weight: 900
+      font-size: 50px
+      text-transform: uppercase
+    &-desc
+      font-weight: 500
+      font-size: 22px
+      color: #000000
+      line-height: 35px
+  &__item-nav
+    font-weight: 900
+    left: auto !important
+    top: auto !important
+    color: #417538
+    font-size: 55px
+    text-transform: uppercase
+    padding-left: 20px
+    padding-right: 20px
+    width: auto !important
+
+.golova_block
+  padding-top: 89px
+  padding-bottom: 90px
+  &__title
+    font-family: 'DIN Pro Cond'
+    font-size: 65px
+    letter-spacing: -0.3px
+    line-height: 65px
+    text-align: center
+    font-weight: 900
+    text-transform: uppercase
+    padding-bottom: 15px
+  &__desc
+    text-transform: uppercase
+    font-size: 30px
+    color: #000000
+    font-weight: 500
+    letter-spacing: -0.2px
+    text-align: center
+    line-height: 45px
+  &__foto
+    text-align: center
+    padding-top: 36px
+    padding-bottom: 31px
+  &__link
+    text-align: center
+    font-weight: 500
+    color: #417538
+    font-size: 25px
+    p
+      padding-bottom: 5px
+.monitoring
+  background: #ffffff
+  padding-top: 100px
+  position: relative
+  padding-bottom: 90px
+  margin-bottom: 75px
+  &__title
+    padding-bottom: 50px
+  &__list
+    width: 100%
+    display: table
+    li
+      padding-left: 55px
+      padding-right: 55px
+      display: table-cell
+      text-align: center
+      vertical-align: top
+      list-style: none
+      height: 90px
+  &__other
+    background: #417538
+    color: #ffffff
+    font-weight: 900
+    text-align: center
+    font-size: 30px
+    line-height: 45px
+    position: absolute
+    left: 50%
+    bottom: -73px
+    padding: 26px 0
+    display: block
+    max-width: 580px
+    transform: translateX(-50%)
+
+.cifri
+  padding-top: 86px
+  padding-bottom: 50px
+  &__title
+    padding-bottom: 20px
+  &__desc
+    font-size: 30px
+    text-align: center
+    color: #000000
+    font-weight: 500
+    text-transform: uppercase
+    padding-bottom: 54px
+  &__item
+    min-height: 324px
+    color: #ffffff
+    background: #000000
+    padding-top: 40px
+    text-align: center
+    font-size: 18px
+    font-weight: 500
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-20px)
+      right: -44px
+    &.plus:after
+      z-index: 5
+      display: inline-block
+      @include sprite($plus-icon)
+    &.ravno:after
+      z-index: 5
+      transform: translateY(-16px)
+      right: -41px
+      display: inline-block
+      @include sprite($ravno-icon)
+    &-title
+      letter-spacing: 1px
+      font-weight: 900
+      font-size: 30px
+      text-transform: uppercase
+      padding-bottom: 41px
+    p
+      padding-bottom: 18px
+      text-transform: uppercase
+
+.calc
+  padding-top: 60px
+  max-width: 860px
+  padding-bottom: 102px
+  margin-left: auto
+  margin-right: auto
+  &:after
+    content: ''
+    display: table
+    clear: both
+  &__title
+    font-size: 65px
+    line-height: 46px
+    padding-bottom: 45px
+    font-weight: 900
+    text-align: left
+    color: #000000
+    text-transform: uppercase
+  &__form-left
+    float: left
+    width: 520px
+  &__rez_calc
+    float: right
+    width: 287px
+    height: 412px
+    background: url(../images/calc-rez-bg.png) no-repeat
+  &__form_row
+    margin-bottom: 20px
+    input
+      background: #ffffff
+      border: #fff solid 1px
+      height: 54px
+      padding: 0 10px
+      width: 100%
+      font-size: 25px
+      color: #000000
+      font-weight: 500
+      font-family: 'DIN Pro Cond'
+  &__form_submit
+    input
+      width: 100%
+      height: 100px
+      background: #417538
+      border: #417538 solid 1px
+      font-size: 45px
+      color: #ffffff
+      text-transform: uppercase
+      font-weight: bold
+      font-family: 'DIN Pro Cond'

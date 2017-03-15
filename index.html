@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/ie-detector.js"></script>
   <script src="js/modernizr.js"></script>
@@ -23,48 +24,895 @@
 <body>
 
 <div class="main">
-<header id="header" class="header">
+<header class="header">
   <div class="container">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa rerum rem minus, reiciendis veniam inventore. Blanditiis nemo quia modi, iste quasi inventore vitae repudiandae vero ipsam molestiae ab, rem officia.
+    <div class="row">
+        <div class="col-md-5">
+            <div class="header__logotip"><a href="#"><img src="./images/logotip.png" alt=""></a></div>
+            <div class="header__slogan">
+                ЗНАЕМ, ЧТО О ВАС ГОВОРЯТ!<br><em>* Проект ГК "ONLY STRATEGY"</em>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">ЧТО ЭТО?</a></li>
+                    <li><a href="#">ЗАЧЕМ?</a></li>
+                    <li><a href="#">ДЛЯ КОГО?</a></li>
+                    <li><a href="#">ПОЧЕМУ?</a></li>
+                    <li><a href="#">сколько стоит?</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="header__phone-email">
+                <a href="tel:88009474777" class="header__phone-email_url">8 (800) 947–47–77</a>
+                <a href="mailto:info@onlyscan.ru" class="header__phone-email_url header__phone-email_url_url_email">info@onlyscan.ru</a>
+            </div>
+        </div>
+    </div>
   </div>
 </header>
 
-	<div class="content ">
-		<h1>TEST ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eligendi, tenetur ducimus, temporibus dolorem nisi natus dasd culpa dignissimos repudiandae minus esse adipisci consequatur voluptatibus fugit ullam, reprehenderit deserunt eveniet?s</h1>
-		<div class="wrapper container">
-			<section class="middle-col">
-				1sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-			</section>
-		  	<aside class="left-col">
-				2sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-				sdfsdfsdfsd  dfgdf gdf gdf g dfg dfgdfgdfg dfgdfg fd g df g dfg fd
-			</aside>
-            <span class="clr"><!--  --></span>
-		</div>
-	</div>
+<section class="quote-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="quote-slider">
+                    <div class="js-quote-init">
+                        <div class="quote-slider__item">
+                            <div class="quote-slider__item-foto">
+                                <img src="./images/foto-top.png" alt="">
+                            </div>
+                            <div class="quote-slider__item-title">
+                                <span>Я даже представить не мог,<br>
+                                    что все так просто!</span>
+                            </div>
+                            <div class="quote-slider__item-soc-autor">
+                                <ul>
+                                    <li><a href="#" class="fb"></a></li>
+                                    <li><a href="#" class="tw"></a></li>
+                                    <li><a href="#" class="vk"></a></li>
+                                </ul>
+                                <span class="autor">— Амиран Сардаров</span>
+                            </div>
+                        </div>
+                        <div class="quote-slider__item">
+                            <div class="quote-slider__item-foto">
+                                <img src="./images/foto-top.png" alt="">
+                            </div>
+                            <div class="quote-slider__item-title">
+                                <span>Я даже представить не мог,<br>
+                                    что все так просто!</span>
+                            </div>
+                            <div class="quote-slider__item-soc-autor">
+                                <ul>
+                                    <li><a href="#" class="fb"></a></li>
+                                    <li><a href="#" class="tw"></a></li>
+                                    <li><a href="#" class="vk"></a></li>
+                                </ul>
+                                <span class="autor">— Амиран Сардаров</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-phone">
+                    <div class="form-phone__inner">
+                        <form action="">
+                            <div class="form-phone__title">
+                                с чего<br>
+                                начнем?
+                            </div>
+                            <div class="form-phone__phone">
+                                <div class="form-phone__phone-title">Ваш номер телефона:</div>
+                                <input type="text" name="" id="" value="+7 (___) ___-__-__">
+                            </div>
+                            <div class="form-phone__botton">
+                                <input type="button" value="&#x411;&#x435;&#x441;&#x43F;&#x43B;&#x430;&#x442;&#x43D;&#x430;&#x44F; &#x43A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44F;" class="btn-free">
+                                <input type="button" value="&#x414;&#x435;&#x43C;&#x43E;-&#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;" class="btn-demo">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="whatit">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h2 class="whatit__title">Что это?</h2>
+                <div class="whatit__info">
+                    "ONLY SCAN" - платформа, работающая с упоминаниями, выгруженными из лучших систем мониторинга и обрабатывающая их с помощью искусственного интеллекта (в сотрудничестве с МИФИ).
+                </div>
+                <div class="whatit__slogan">
+                    Притом мы снижаем стоимость <br>сервисов для вас до 12 раз!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="searchblock">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="searchblock__item">
+                    <div class="searchblock__item-title">поиск</div>
+                    <div class="searchblock__item-info">по заданным словам</div>
+                    <div class="searchblock__inputsearch">Отзывы (ваша компания)</div>
+                    <div class="searchblock__inputsearch">Посоветуйте (ваш продукт / услуга)</div>
+                    <div class="searchblock__inputsearch">Где заказать(ваш продукт / услуга)</div>
+                    <div class="searchblock__big-letter">
+                        <span class="big">В</span>
+                        <span>
+                        ПОСТАХ <br>
+                        СООБЩЕНИЯХ <br>
+                        КОММЕНТАРИЯХ
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="searchblock__item">
+                    <div class="searchblock__item-title">СРЕДИ</div>
+                    <div class="searchblock__item-info">32 тыс. популярных  СМИ</div>
+                    <div class="searchblock__item-title-soc">ВСЕ ПОПУЛЯРНЫЕ СОЦ. СЕТИ:</div>
+                    <ul class="searchblock__soc_list">
+                        <li><img src="./images/vk-c.png" alt=""></li>
+                        <li><img src="./images/ok-c.png" alt=""></li>
+                        <li><img src="./images/ins-c.png" alt=""></li>
+                        <li><img src="./images/fb-c.png" alt=""></li>
+                        <li><img src="./images/tw-c.png" alt=""></li>
+                        <li><img src="./images/gp-c.png" alt=""></li>
+                        <li><img src="./images/p-c.png" alt=""></li>
+                        <li><img src="./images/tube-c.png" alt=""></li>
+                    </ul>
+                    <div class="searchblock__item-title-soc">Десятки тычяч других площадок:</div>
+                    <ul class="searchblock__plosh_list">
+                        <li>ФОРУМЫ <br>ДОСКИ</li>
+                        <li>ПОРТАЛЫ <br>JOB-САЙТЫ</li>
+                        <li>JOB-САЙТЫ <br>В Т.Ч. АГРЕГАТОРЫ</li>
+                    </ul>
+                    <div class="text-center">
+                        <img src="./images/logo-ym.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="searchblock__item">
+                    <div class="searchblock__item-title">ПОЛУЧАЯ</div>
+                    <div class="searchblock__item-info">результаты и достигая цели</div>
+                    <div class="searchblock__target">
+                        <img src="./images/target.png" alt="">
+                    </div>
+                    <div class="searchblock__big-letter">
+                        <span class="big">НА</span>
+                        <span>
+                        ПОЧТУ <br>
+                        В crm <br>
+                        диск в любом формате
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="example">
+    <div class="container">
+        <h2 class="example__title">ПРИМЕРЫ</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="example__item">
+                    <a href="#" class="example__item-img"><img src="./images/example-pic.png" alt=""></a>
+                    <a href="#" class="example__item-url">www.onlyscan.ru</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="example__item">
+                    <a href="#" class="example__item-img"><img src="./images/example-pic.png" alt=""></a>
+                    <a href="#" class="example__item-url">www.onlyscan.ru</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="example__item">
+                    <a href="#" class="example__item-img"><img src="./images/example-pic.png" alt=""></a>
+                    <a href="#" class="example__item-url">www.onlyscan.ru</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="whatfor">
+    <div class="container">
+        <h2 class="whatfor__title">зачем?</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        1
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-1.png" alt=""></span>
+                        Увеличение <br>продаж
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        2
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-2.png" alt=""></span>
+                        Аналитические <br>исследования рынка
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        3
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-3.png" alt=""></span>
+                        Определение <br>портрета ЦА
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        4
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-4.png" alt=""></span>
+                        Выявление <br>лидеров мнений
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        5
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-5.png" alt=""></span>
+                        Географическая <br>разведка
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        6
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-6.png" alt=""></span>
+                        Мониторинг <br>репутации
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        7
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-7.png" alt=""></span>
+                        Анализ <br>активности
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        8
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-8.png" alt=""></span>
+                        постоянный  <br>Контроль качества
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        9
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-9.png" alt=""></span>
+                        Оценка PR и <br>рекламны
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        10
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-10.png" alt=""></span>
+                        Определение ниши <br>для бизнеса
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        11
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-11.png" alt=""></span>
+                        Защита от плохих <br>"вбросов"
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        12
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-12.png" alt=""></span>
+                        Клиентская <br>поддержка
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        13
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-13.png" alt=""></span>
+                        Конкурентная <br>разведка
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        14
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-14.png" alt=""></span>
+                        Контроль действующих <br>сотрудников
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="whatfor__item">
+                    <span class="whatfor__item-td whatfor__item-td_td_number">
+                        15
+                    </span>
+                    <span class="whatfor__item-td whatfor__item-td_td_text">
+                        <span class="whatfor__item-icon"><img src="./images/whatfor-icon-15.png" alt=""></span>
+                        Отзывы <br>сотрудников
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tank">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tank__slogan">
+                    <div class="tank__slogan-title">НЕ НУЖНО ОГРАНИЧИВАТЬСЯ ЧЕМ-ТО ОДНИМ:</div>
+                    С НАШЕЙ ПОМОЩЬЮ ВЫ МОЖЕТЕ ДОСТИГАТЬ УСПЕХА ПО ВСЕМ ФРОНТАМ!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="big_zoom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="big_zoom__item">
+                    <div class="big_zoom__title">
+                        <div class="big_zoom__title-big">БОЛЬШИЕ</div>
+                        <div class="big_zoom__title-right">МАСШТАБЫ?<br><span>УСТУПКИ!</span></div>
+                        <div class="big_zoom__title-small">ИНДИВИДУАЛЬНЫЕ УСЛОВИЯ ДЛЯ КРУПНОГО БИЗНЕСА С МАСШТАБНЫМИ ЦЕЛЯМИ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="form_block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h2 class="form_block__title">ОСТАВЬТЕ КОНТАКТЫ</h2>
+                <div class="form_block__desc">И МЫ СОБЕРЕМСЯ ВСЕЙ КОМАНДОЙ НА МОЗГОВОЙ ШТУМ ДЛЯ ОБСУЖДЕНИЯ ВАШЕГО ПРОЕКТА</div>
+                <form action="">
+                    <div class="form_block__row">
+                        <input type="text" placeholder="&#x412;&#x430;&#x448; &#x431;&#x440;&#x435;&#x43D;&#x434;"><input type="text" placeholder="&#x422;&#x435;&#x43B;&#x435;&#x444;&#x43E;&#x43D;">
+                    </div>
+                    <div class="form_block__row_submit">
+                        <input type="submit" value="&#x437;&#x430;&#x43D;&#x44F;&#x442;&#x44C; &#x43C;&#x435;&#x441;&#x442;&#x43E;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="for_whom">
+    <div class="container">
+        <h2 class="for_whom__title">ДЛЯ КОГО?</h2>
+        <div class="for_whom__item">
+            <div class="row">
+                <div class="col-md-3 for_whom__item-td">
+                    <img src="./images/for_whom-1.png" alt="">
+                </div>
+                <div class="col-md-9 for_whom__item-td">
+                    <div class="for_whom__item-title">ВЛАДЕЛЬЦЫ БИЗНЕСА</div>
+                    <div class="for_whom__item-desc">Желающие увеличить оборот и долю рынка еще какой-то текст - так как очень мало текста по сравнению с остальными пунктами</div>
+                </div>
+            </div>
+        </div>
+        <div class="for_whom__item">
+            <div class="row">
+                <div class="col-md-9 for_whom__item-td">
+                    <div class="for_whom__item-title">НАЧИНАЮЩИЕ ПРЕДПРИНИМАТЕЛИ</div>
+                    <div class="for_whom__item-desc">Выбрать прибыльную / перспективную нишу определив тренды на рынке и изучив спрос</div>
+                </div>
+                <div class="col-md-3 for_whom__item-td">
+                    <img src="./images/for_whom-2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="for_whom__item">
+            <div class="row">
+                <div class="col-md-3 for_whom__item-td">
+                    <img src="./images/for_whom-3.png" alt="">
+                </div>
+                <div class="col-md-9 for_whom__item-td">
+                    <div class="for_whom__item-title">руководители</div>
+                    <div class="for_whom__item-desc">Которым нужна помощь в развитии компании / отдела Загрузка отдела продаж Выполнение планов, рагрузка складов Улучшение коммуникаций / Снижение нагрузки на колл-центр</div>
+                </div>
+            </div>
+        </div>
+        <div class="for_whom__item">
+            <div class="row">
+                <div class="col-md-9 for_whom__item-td">
+                    <div class="for_whom__item-title">МАРКЕТОЛОГИ / PR / РЕКЛАМИСТЫ</div>
+                    <div class="for_whom__item-desc">Пытающиеся определить эффективность рекламных каналов Находящиеся в поисках механизма "взрывного" партизанского маркетинга Стремящиеся достичь поставленные KPI</div>
+                </div>
+                <div class="col-md-3 for_whom__item-td">
+                    <img src="./images/for_whom-4.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="for_whom__item">
+            <div class="row">
+                <div class="col-md-3 for_whom__item-td">
+                    <img src="./images/for_whom-5.png" alt="">
+                </div>
+                <div class="col-md-9 for_whom__item-td">
+                    <div class="for_whom__item-title">чАСТНЫЕ СПЕЦИАЛИСТЫ</div>
+                    <div class="for_whom__item-desc">Желающие зарабатывать больше $ и трансформировать свое "ремесло" в  "бизнес”</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="for_whom__title-but">И ВСЕ, <br>КТО ХОЧЕТ ДЕРЖАТЬ РУКУ <br>НА ПУЛЬСЕ ИНТЕРНЕТА</div>
 
-<footer id="footer" class="footer">
-  <div class="container">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maxime reiciendis aliquam magni quibusdam, commodi, laudantium adipisci id assumenda similique, mollitia velit laboriosam itaque necessitatibus voluptate amet officia doloribus ipsum.
-  </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="special">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="special__title">А особенно это доказало эффективность в услугах / продуктах с <br> высоким средним чеком и длинными циклами продаж, спрос <br> на которые явно сформирован.  А именно:</div>
+            </div>
+            <div class="col-md-12">
+                <div class="circle-block">
+                    <span class="c1 circle-block__item"><span>прочие товары</span></span>
+                    <span class="c2 circle-block__item"><span>авто</span></span>
+                    <span class="c3 circle-block__item"><span>IT</span></span>
+                    <span class="c4 circle-block__item"><span>юриспру- денция</span></span>
+                    <span class="c5 circle-block__item"><span>банки</span></span>
+                    <span class="c6 circle-block__item"><span>бытовые услуги</span></span>
+                    <span class="c7 circle-block__item"><span>туризм</span></span>
+                    <span class="c8 circle-block__item"><span>фото видео</span></span>
+                    <span class="c9 circle-block__item"><span>праздники</span></span>
+                    <span class="c10 circle-block__item"><span>ремонт</span></span>
+                    <span class="c11 circle-block__item"><span>грузо- перевозки</span></span>
+                    <span class="c12 circle-block__item"><span>красота</span></span>
+                    <span class="c13 circle-block__item"><span>потолки</span></span>
+                    <span class="c14 circle-block__item"><span>мебель</span></span>
+                    <span class="c15 circle-block__item"><span>медицина</span></span>
+                    <span class="c16 circle-block__item"><span>окна</span></span>
+                    <span class="c17 circle-block__item"><span>Образо-вание</span></span>
+                    <span class="c18 circle-block__item"><span>недви-жимость</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="form_block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="form_block__title">УЗНАЙТЕ</div>
+                <div class="form_block__desc">ПОДХОДИТ ЛИ ЭТа услуга именно ВАМ:</div>
+                <form action="">
+                    <div class="form_block__row">
+                        <input type="text" placeholder="&#x412;&#x430;&#x448;&#x430; &#x442;&#x435;&#x43C;&#x430;&#x442;&#x438;&#x43A;&#x430; / &#x43D;&#x438;&#x448;&#x430; / &#x43F;&#x440;&#x43E;&#x434;&#x443;&#x43A;&#x442;"><input type="text" placeholder="&#x422;&#x435;&#x43B;&#x435;&#x444;&#x43E;&#x43D;">
+                    </div>
+                    <div class="form_block__row_submit">
+                        <input type="submit" value="&#x437;&#x430;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x430;&#x43D;&#x430;&#x43B;&#x438;&#x437;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="why_block">
+    <div class="container">
+        <h2 class="why_block__title">почему?</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="why_block__title-h3">БЫСТРЕЕ</h3>
+                <div class="why_block__snas">
+                    <h4 class="why_block__title-h4">С нас</h4>
+                    <p>Все ресурсы 2 продвинутых систем</p>
+                    <p>Аналитик, настраивающий критерии поиска с учетом лингвистических особенностей и интеграцию с системами для отслеживания посещаемости вашего сайта</p>
+                    <p>Фильтрация "шума", включая одноименные компании, спамные техники конкурентов и пр.</p>
+                    <p>Менеджер, создающий удобные детальные отчеты и контролирующий все процессы</p>
+                </div>
+                <div class="why_block__svas">
+                    <h4 class="why_block__title-h4">С ВАС</h4>
+                    <p>Ничего кроме желания</p>
+                </div>
+            </div>
+            <div class="col-md-6 why_block__right">
+                <h3 class="why_block__title-h3">ДЕШЕВЛЕ</h3>
+                <table class="why_block__table-lid">
+                    <thead>
+                        <tr>
+                            <td><h4 class="why_block__title-h4">КАНАЛ</h4></td>
+                            <td><h4 class="why_block__title-h4">БЮДЖЕТ</h4></td>
+                            <td><h4 class="why_block__title-h4">ЛИДЫ</h4></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CPC</td>
+                            <td>50 тыс. руб.</td>
+                            <td>20 лидов</td>
+                        </tr>
+                        <tr>
+                            <td>CPM</td>
+                            <td>200 тыс. руб.</td>
+                            <td>50 лидов</td>
+                        </tr>
+                        <tr>
+                            <td>CPA</td>
+                            <td>200 тыс. руб.</td>
+                            <td>70 низкокачественных лидов</td>
+                        </tr>
+                        <tr>
+                            <td>SEO</td>
+                            <td>40 тыс. руб.</td>
+                            <td>50 лидов</td>
+                        </tr>
+                        <tr>
+                            <td>SMM</td>
+                            <td>30 тыс. руб.</td>
+                            <td>15 лидов</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>ONLY SCAN</td>
+                            <td>15 тыс. руб.</td>
+                            <td>до 100 и более <br>лидов!</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="row why_block__easier">
+            <div class="col-md-12">
+                <h3 class="why_block__title-h3">ПРОЩЕ</h3>
+                <div class="why_block__easier_bl1">
+                    <h4 class="why_block__title-h4">ОБЫЧНЫЕ МЕТОДЫ</h4>
+                    <p>Передать доступы к ресурсам </p>
+                </div>
+                <div class="why_block__easier_bl2">
+                    <p>Постоянно контролировать подрядчиков</p>
+                </div>
+                <div class="why_block__easier_bl3">
+                    <p>Перепроверять работу</p>
+                </div>
+                <div class="why_block__easier_bl4">
+                    <h4 class="why_block__title-h4">ONLY SCAN</h4>
+                    <p>Ничего кроме желания</p>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center why_block__title-h3">По сравнению с другими сервисами</h2>
+        <div class="row why_block__serv-list">
+            <div class="col-md-4">
+                <div class="left why_block__serv-item">
+                    <div class="why_block__serv-item-img"><img src="./images/serv-1.png" alt=""></div>
+                    Реально помогающая <br>клиентская поддержка
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="center why_block__serv-item">
+                    <div class="why_block__serv-item-img"><img src="./images/serv-2.png" alt=""></div>
+                    Максимальный контроль <br>информационного поля
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="right why_block__serv-item">
+                    <div class="why_block__serv-item-img"><img src="./images/serv-3.png" alt=""></div>
+                    Глубокий анализ <br>данных
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="fackti-block">
+    <div class="container">
+        <h2 class="fackti-block__title">ПРОСТО ФАКТЫ</h2>
+        <div class="row">
+            <div class="fackti-block__slider-nav">
+                <div class="js-fackt-slider-nav">
+                    <div class="fackti-block__item-nav">АВТО ДИЛЕР</div>
+                    <div class="fackti-block__item-nav">АВТО ДИЛЕР 1</div>
+                    <div class="fackti-block__item-nav">АВТО ДИЛЕР 2</div>
+                </div>
+            </div>
+            <div class="fackti-block__slider-but">
+                <div class="js-fackt-slider-date">
+                    <div class="fackti-block__item-date">
+                        <div class="col-md-offset-2 col-md-4 fackti-block__item-date-no">
+                            <div class="fackti-block__item-date-img"><img src="./images/like-no.jpg" alt=""></div>
+                            <div class="fackti-block__item-date-title">до</div>
+                            <div class="fackti-block__item-date-desc">
+                                Мало входящих обращений
+                                Невыполнение плана = Недозагруз менеджеров
+                                Бессистемный подход в интернет-маркетинге
+                            </div>
+                        </div>
+                        <div class="col-md-4 fackti-block__item-date-yes">
+                            <div class="fackti-block__item-date-img"><img src="./images/like-yes.jpg" alt=""></div>
+                            <div class="fackti-block__item-date-title">ПОСЛЕ</div>
+                            <div class="fackti-block__item-date-desc">
+                                Конверсия увеличена до 35%!
+                                Входящий поток обращений увеличен в 10 раз!
+                                Продажа 15 машин в месяц только с помощью
+                                страницы в Facebook!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fackti-block__item-date">
+                        <div class="col-md-offset-2 col-md-4 fackti-block__item-date-no">
+                            <div class="fackti-block__item-date-img"><img src="./images/like-no.jpg" alt=""></div>
+                            <div class="fackti-block__item-date-title">1до</div>
+                            <div class="fackti-block__item-date-desc">
+                                Мало входящих обращений
+                                Невыполнение плана = Недозагруз менеджеров
+                                Бессистемный подход в интернет-маркетинге
+                            </div>
+                        </div>
+                        <div class="col-md-4 fackti-block__item-date-yes">
+                            <div class="fackti-block__item-date-img"><img src="./images/like-yes.jpg" alt=""></div>
+                            <div class="fackti-block__item-date-title">ПОСЛЕ</div>
+                            <div class="fackti-block__item-date-desc">
+                                Конверсия увеличена до 35%!
+                                Входящий поток обращений увеличен в 10 раз!
+                                Продажа 15 машин в месяц только с помощью
+                                страницы в Facebook!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fackti-block__item-date">
+                        <div class="col-md-offset-2 col-md-4 fackti-block__item-date-no">
+                            <div class="fackti-block__item-date-img"><img src="./images/like-no.jpg" alt=""></div>
+                            <div class="fackti-block__item-date-title">2до</div>
+                            <div class="fackti-block__item-date-desc">
+                                Мало входящих обращений
+                                Невыполнение плана = Недозагруз менеджеров
+                                Бессистемный подход в интернет-маркетинге
+                            </div>
+                        </div>
+                        <div class="col-md-4 fackti-block__item-date-yes">
+                            <div class="fackti-block__item-date-img"><img src="./images/like-yes.jpg" alt=""></div>
+                            <div class="fackti-block__item-date-title">ПОСЛЕ</div>
+                            <div class="fackti-block__item-date-desc">
+                                Конверсия увеличена до 35%!
+                                Входящий поток обращений увеличен в 10 раз!
+                                Продажа 15 машин в месяц только с помощью
+                                страницы в Facebook!
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="form_block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="form_block__title">интересно?</div>
+                <div class="form_block__desc">оставьте заявку и мы перезвоним вам в течение 15 минут</div>
+                <form action="">
+                    <div class="form_block__row">
+                        <input type="text" placeholder="&#x412;&#x430;&#x448;&#x435; &#x438;&#x43C;&#x44F;"><input type="text" placeholder="&#x422;&#x435;&#x43B;&#x435;&#x444;&#x43E;&#x43D;">
+                    </div>
+                    <div class="form_block__row_submit">
+                        <input type="submit" value="&#x437;&#x430;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x43E;&#x431;&#x440;&#x430;&#x442;&#x43D;&#x44B;&#x439; &#x437;&#x432;&#x43E;&#x43D;&#x43E;&#x43A;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="golova_block">
+    <div class="container">
+        <h2 class="golova_block__title">ВО ГЛАВЕ СЕРВИСА Владислав Утушкин</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="golova_block__desc">Учредитель digital-агентства "RVR-Project" и компании <br>по контролю подрядчиков "Only Strategy"</div>
+                <div class="golova_block__foto"><img src="./images/utushkin-foto.png" alt=""></div>
+                <div class="golova_block__link">
+                    <p>utushkin.project@gmail.com</p>
+                    <p>www.facebook.com/v.utushkin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="monitoring">
+    <div class="container">
+        <h2 class="golova_block__title monitoring__title">СИСТЕМЫ МОНИТОРИНГА ИСПОЛЬЗУЮТ</h2>
+        <div class="row">
+            <ul class="monitoring__list">
+                <li><a href="#"><img src="./images/mon-1-b.png" data-src="./images/mon-1-b.png" data-color="./images/mon-1.png" class="js-client-hover" alt=""></a></li>
+                <li><a href="#"><img src="./images/mon-2-b.png" data-src="./images/mon-2-b.png" data-color="./images/mon-2.png" class="js-client-hover" alt=""></a></li>
+                <li><a href="#"><img src="./images/mon-3-b.png" data-src="./images/mon-3-b.png" data-color="./images/mon-3.png" class="js-client-hover" alt=""></a></li>
+                <li><a href="#"><img src="./images/mon-4-b.png" data-src="./images/mon-4-b.png" data-color="./images/mon-4.png" class="js-client-hover" alt=""></a></li>
+            </ul>
+            <ul class="monitoring__list">
+                <li><a href="#"><img src="./images/mon-5-b.png" data-src="./images/mon-5-b.png" data-color="./images/mon-5.png" class="js-client-hover" alt=""></a></li>
+                <li><a href="#"><img src="./images/mon-6-b.png" data-src="./images/mon-6-b.png" data-color="./images/mon-6.png" class="js-client-hover" alt=""></a></li>
+                <li><a href="#"><img src="./images/mon-7-b.png" data-src="./images/mon-7-b.png" data-color="./images/mon-7.png" class="js-client-hover" alt=""></a></li>
+                <li><a href="#"><img src="./images/mon-8-b.png" data-src="./images/mon-8-b.png" data-color="./images/mon-8.png" class="js-client-hover" alt=""></a></li>
+            </ul>
+            <ul class="monitoring__list">
+                <li><a href="#"><img src="./images/mon-9-b.png" data-src="./images/mon-9-b.png" data-color="./images/mon-9.png" class="js-client-hover" alt=""></a></li>
+                <li><a href="#"><img src="./images/mon-10-b.png" data-src="./images/mon-10-b.png" data-color="./images/mon-10.png" class="js-client-hover" alt=""></a></li>
+                <li><a href="#"><img src="./images/mon-11-b.png" data-src="./images/mon-11-b.png" data-color="./images/mon-11.png" class="js-client-hover" alt=""></a></li>
+                <li><a href="#"><img src="./images/mon-12-b.png" data-src="./images/mon-12-b.png" data-color="./images/mon-12.png" class="js-client-hover" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="col-md-6 monitoring__other">
+            И ТЫСЯЧИ ДРУГИХ КЛИЕНТОВ, <br>
+            В Т.Ч. ИЗ СФЕРЫ МАЛОГО БИЗНЕСА
+        </div>
+    </div>
+</section>
+<section class="cifri">
+    <div class="container">
+        <h2 class="golova_block__title cifri__title">СКОЛЬКО В ЦИФРАХ?</h2>
+        <div class="cifri__desc">ВСЕ ПРОСТО КАК 2Х2:</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="plus cifri__item">
+                    <div class="cifri__item-title">Действующие потери</div>
+                    <p>50% рынка</p>
+                    <p>+100 потенциальных заявок</p>
+                    <p>Негатив, который можно было <br>бы обернуть в "+"</p>
+                    <p>Бесконтрольные сотрудники</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ravno cifri__item">
+                    <div class="cifri__item-title">Стоимость сервиса</div>
+                    <p>Всего 15 тыс. руб. за разовую <br>настройку + 1 месяц сервиса в подарок</p>
+                    <p>Последующие месяца - от 15 тыс. руб. <br> / 1 направление</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cifri__item">
+                    <div class="cifri__item-title">Вы получаете</div>
+                    <p>Все упоминания в своей нише с <br>тонкой настройкой</p>
+                    <p>Ценную информацию о конкурентах</p>
+                    <p>Полный контроль над ситуацией на рынке</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="calc">
+    <div class="calc__form-left">
+        <div class="calc__title">ПОСЧИТАЕМ ВМЕСТЕ:</div>
+        <div class="calc__form_row">
+            <input type="text" placeholder="&#x41B;&#x438;&#x434;&#x43E;&#x432;">
+        </div>
+        <div class="calc__form_row">
+            <input type="text" placeholder="&#x41B;&#x438;&#x434;&#x43E;&#x432; &#x434;&#x43E;&#x445;&#x43E;&#x434;&#x44F;&#x442; &#x434;&#x43E; &#x43E;&#x43F;&#x43B;&#x430;&#x442;&#x44B;">
+        </div>
+        <div class="calc__form_row">
+            <input type="text" placeholder="&#x421;&#x440;&#x435;&#x434;&#x43D;&#x438;&#x439; &#x447;&#x435;&#x43A;">
+        </div>
+        <div class="calc__form_submit">
+            <input type="submit" value="&#x43F;&#x43E;&#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C; &#x43F;&#x440;&#x438;&#x431;&#x44B;&#x43B;&#x44C;">
+        </div>
+    </div>
+    <div class="calc__rez_calc">
+
+    </div>
+</section>
+<section class="foot form_block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="form_block__title">ВСЕ ЕЩЕ НЕ РЕШИЛИ?</div>
+                <div class="form_block__desc">Давайте созвонимся и четко, по делу, без "впаривания" и "разжевывания" ненужных деталей выясним, можем ли вам помочь</div>
+                <form action="">
+                    <div class="form_block__row">
+                        <input type="text" placeholder="&#x412;&#x430;&#x448;&#x435; &#x438;&#x43C;&#x44F;"><input type="text" placeholder="&#x422;&#x435;&#x43B;&#x435;&#x444;&#x43E;&#x43D;">
+                    </div>
+                    <div class="form_block__row_submit">
+                        <input type="submit" value="&#x436;&#x434;&#x443; &#x437;&#x432;&#x43E;&#x43D;&#x43E;&#x43A;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <a href="tel:7" class="footer__phone">+7 (495) 760-12-29</a>
+                <div class="footer__desc">НЕ ОТКЛАДЫВАЙТЕ ЗВОНОК!</div>
+                <div class="footer__payment">
+                    <ul>
+                        <li><img src="./images/pay1.png" alt=""></li>
+                        <li><img src="./images/pay2.png" alt=""></li>
+                        <li><img src="./images/pay3.png" alt=""></li>
+                        <li><img src="./images/pay4.png" alt=""></li>
+                        <li><img src="./images/pay5.png" alt=""></li>
+                        <li><img src="./images/pay6.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <img src="./images/sheet.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 </div>
 
 <!-- scripts -->
 
+<script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/libs.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/common.js"></script>
 <script src="//localhost:35729/livereload.js"></script>
 
