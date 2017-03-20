@@ -1,8 +1,25 @@
+input[type='button'],
+input[type='submit']
+  cursor: pointer
+input
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder
+    color: #000000
+
+
 .quote-form
   padding-top: 5px
   padding-bottom: 100px
+  @media (max-width: 800px)
+    padding-bottom: 50px
+  @media (max-width: 767px)
+    padding-bottom: 38px
 .quote-slider
   position: relative
+  @media (max-width: 767px)
+    overflow: hidden
   .slick-arrow
     display: inline-block
     position: absolute
@@ -22,9 +39,13 @@
       left: 423px
       &:hover
         @include sprite($next-quote-hover)
+    @media (max-width: 767px)
+      display: none
 
   &__item
     float: left
+    @media (max-width: 767px)
+      padding-top: 30px
     &-title
       padding-top: 14px
       line-height: 50px
@@ -51,8 +72,25 @@
         font-style: normal
         font-size: 120px
         line-height: 100px
+      @media (max-width: 767px)
+        font-size: 32px
+        padding-left: 8px
+        line-height: 40px
+        padding-top: 21px
+        &:before
+          left: -9px
+        br
+          display: none
+    &-foto
+      @media (max-width: 767px)
+        max-width: 190px
+        display: block
+        margin-left: auto
+        margin-right: auto
     &-soc-autor
       padding-top: 8px
+      @media (max-width: 767px)
+        padding-top: 6px
       ul
         display: block
         padding-left: 2px
@@ -68,6 +106,13 @@
               @include sprite($fb-s)
             &.tw
               @include sprite($tw-s)
+        @media (max-width: 767px)
+          float: none
+          padding-top: 17px
+          padding-left: 10px
+          li
+            padding-left: 0
+            padding-right: 17px
       .autor
         font-size: 20px
         font-family: 'DIN Pro Cond'
@@ -75,14 +120,55 @@
         float: right
         padding-right: 110px
         font-style: normal
+        @media (max-width: 767px)
+          padding-right: 0
+          float: none
+          display: block
+          text-align: left
+          padding-left: 16px
 
 .form-phone
   margin-top: 37px
   margin-left: 5px
   background: #417538
   padding: 5px
+  position: relative
+  overflow: hidden
+  z-index: 1
   border-radius: 3px
+  @media (max-width: 800px)
+    margin-top: 50px
+    clear: both
+  @media (max-width: 767px)
+    display: none
+  &__rotate
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: rotate(230deg) translate(-50%, -50%)
+    transform-origin: 0 0
+    width: 800px
+    height: 800px
+    &:before, &:after
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 50%
+      background: none
+      display: block
+      content: ''
+      z-index: 2
+    &:after
+      top: 50%
+      background: #000
+      bottom: 0
+  &:hover
+    .form-phone__rotate
+      animation: play_button 5s infinite
   &__inner
+    position: relative
+    z-index: 3
     color: #000000
     background: url(../images/main-bg.jpg) center top
     padding: 17px 35px 30px 43px
@@ -90,6 +176,8 @@
       content: ''
       display: table
       clear: both
+    @media (max-width: 1025px)
+      padding: 15px
   &__title
     font-size: 50px
     width: 210px
@@ -101,8 +189,15 @@
     font-weight: 900
     font-style: normal
     text-transform: uppercase
+    @media (max-width: 1025px)
+      width: 100%
+      br
+        display: none
   &__phone
     float: left
+    @media (max-width: 1025px)
+      float: none
+      clear: both
     &-title
       padding-top: 21px
       letter-spacing: 0.1px
@@ -111,6 +206,8 @@
       font-style: normal
       font-size: 20px
       padding-bottom: 8px
+      @media (max-width: 1025px)
+        padding-top: 10px
     input
       font-family: 'DIN Pro Cond'
       font-weight: 500
@@ -124,6 +221,8 @@
       padding-right: 10px
       background: none
       border: #000 solid 2px
+      @media (max-width: 1025px)
+        width: 100%
   &__botton
     clear: both
     padding-top: 19px
@@ -151,12 +250,30 @@
     border: none
     text-transform: uppercase
     background: #000000
+  @media (max-width: 1025px)
+    input.btn-demo, input.btn-free
+      display: block
+      width: 100%
+      float: none
 
 .whatit
   background: #ffffff
   .container
     min-height: 515px
-    background: url(../images/whatit-pic.jpg) no-repeat 98% bottom
+    background: url(../images/mygik.png) no-repeat 98% 55%
+    background-size: 487px auto
+    transition: background 5s ease-out 0.5s
+  &.show
+    .container
+      background: url(../images/mygik.png) no-repeat 98% 55%, url(../images/mozgi.png) no-repeat 80% 9%
+      background-size: 487px auto, 120px auto
+      transition: background 5s ease-out 0.5s
+    @media (max-width: 1025px)
+      background-size: 40% auto
+    @media (max-width: 800px)
+      min-height: 100px
+      background: none
+      padding-bottom: 30px
   &__title
     font-family: 'DIN Pro Cond'
     font-weight: 900
@@ -166,12 +283,22 @@
     line-height: 81.42px
     text-transform: uppercase
     padding-top: 89px
+    @media (max-width: 800px)
+      padding-top: 40px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: normal
+      padding-top: 15px
   &__info
     font-size: 25px
     line-height: 35px
     padding-top: 13px
     color: #7b7b7b
     font-family: 'DIN Pro Cond'
+    @media (max-width: 767px)
+      font-size: 19px
+      padding-top: 4px
+      line-height: 24px
   &__slogan
     padding-top: 34px
     font-family: 'DIN Pro Cond'
@@ -182,13 +309,40 @@
     text-transform: uppercase
     color: #417538
     background: url("../images/whatit-slogan.png") no-repeat 97.4% 106%
+    @media (max-width: 1025px)
+      font-size: 30px
+      background-size: 30% auto
+    @media (max-width: 767px)
+      font-size: 30px
+      line-height: 40px
+      padding-top: 16px
+      br
+        display: none
+      -webkit-background-size: 128px 62px
+      background-size: 128px 62px
+      background-position: 0 100%
+      padding-bottom: 82px
 
 .searchblock
   padding: 99px 0
+  @media (max-width: 800px)
+    padding: 50px 0
+  @media (max-width: 767px)
+    padding-top: 32px
+    padding-bottom: 11px
   &__item
     background: #000000
-    height: 406px
-    padding: 0 20px
+    min-height: 406px
+    padding: 0 20px 20px
+    @media (max-width: 800px)
+      margin-bottom: 20px
+    @media (max-width: 767px)
+      margin-left: -15px
+      margin-right: -15px
+      padding: 0 17px 10px
+      min-height: 361px
+      margin-bottom: 18px
+
     &-title
       font-size: 45px
       line-height: 46px
@@ -199,19 +353,31 @@
       text-transform: uppercase
       padding-top: 21px
       letter-spacing: 1.6px
+      @media (max-width: 767px)
+        font-size: 40px
+        padding-top: 17px
+        line-height: 48px
     &-title-soc
       font-size: 20px
       text-transform: uppercase
       color: #ffffff
       font-weight: 900
       margin-top: -6px
+      @media (max-width: 767px)
+        font-size: 18px
+        letter-spacing: -0.1px
     &-info
       font-size: 25px
       padding-bottom: 25px
       letter-spacing: 1px
       color: #ffffff
       text-align: center
+      @media (max-width: 767px)
+        font-size: 22px
+        line-height: 19px
   &__inputsearch
+    display: block
+    text-decoration: none
     height: 40px
     background: #ffffff
     padding: 0 10px
@@ -229,10 +395,21 @@
       top: 10px
       display: inline-block
       @include sprite($lupa)
+    @media (max-width: 767px)
+      height: 35px
+      line-height: 35px
+      margin-bottom: 14px
+      font-size: 16px
+      &:after
+        top: 8px
+        right: 7px
   &__target
     text-align: center
     padding-top: 16px
     padding-bottom: 38px
+    @media (max-width: 767px)
+      padding-top: 7px
+      padding-bottom: 27px
   &__big-letter
     font-family: 'DIN Pro Cond'
     font-weight: 500
@@ -241,6 +418,9 @@
     color: #ffffff
     display: table
     margin: 0
+    @media (max-width: 767px)
+      font-size: 16px
+      line-height: 21px
     span
       text-transform: uppercase
       text-align: left
@@ -253,6 +433,11 @@
         font-size: 120px
         line-height: 87px
         letter-spacing: 8px
+        @media (max-width: 767px)
+          font-size: 106px
+          line-height: 74px
+          text-indent: -5px
+          letter-spacing: 13px
   &__soc_list
     display: block
     overflow: hidden
@@ -269,6 +454,10 @@
         text-align: right
       &:nth-child(1), &:nth-child(4n+1)
         text-align: left
+    @media (max-width: 767px)
+      padding-top: 10px
+      li
+        padding-bottom: 19px
   &__plosh_list
     display: block
     overflow: hidden
@@ -285,11 +474,31 @@
         width: 90px
       &:nth-child(2)
         width: 105px
-
+      @media (max-width: 1025px)
+        width: 50%
+    @media (max-width: 767px)
+      padding-top: 10px
+      padding-bottom: 10px
+      li
+        width: 80px
+        letter-spacing: -0.1px
+        &:nth-child(1)
+          width: 80px
+        &:nth-child(2)
+          width: 93px
+          letter-spacing: -0.9px
+        &:nth-child(3)
+          width: 110px
+          letter-spacing: -0px
 .example
   background: #ffffff
   padding-top: 98px
   padding-bottom: 94px
+  @media (max-width: 800px)
+    padding: 40px 0
+  @media (max-width: 767px)
+    padding-top: 20px
+    padding-bottom: 5px
   &__title
     font-size: 65px
     line-height: 65px
@@ -300,7 +509,13 @@
     text-transform: uppercase
     letter-spacing: -0.1px
     padding-bottom: 43px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
+      padding-bottom: 12px
   &__item
+    @media (max-width: 767px)
+      padding-bottom: 20px
     &-img
       display: block
       margin-bottom: 7px
@@ -334,10 +549,18 @@
       color: #417538
       text-decoration: none
       text-transform: uppercase
+      @media (max-width: 767px)
+        font-size: 20px
+        line-height: 25px
 
 .whatfor
   padding-top: 89px
   padding-bottom: 15px
+  @media (max-width: 800px)
+    padding: 10px 0 10px
+  @media (max-width: 767px)
+    padding-top: 21px
+    padding-bottom: 0
   &__title
     font-size: 65px
     line-height: 65px
@@ -348,10 +571,16 @@
     text-transform: uppercase
     letter-spacing: -0.1px
     padding-bottom: 43px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
+      padding-bottom: 13px
   &__item
     display: table
     margin: 0
     min-height: 188px
+    @media (max-width: 767px)
+      min-height: 80px
     &-td
       display: table-cell
       text-transform: uppercase
@@ -360,21 +589,42 @@
       color: #000000
       font-size: 25px
       line-height: 36px
+      @media (max-width: 767px)
+        font-size: 14px
+        line-height: 16px
+        vertical-align: text-top
       &_td_number
-        text-indent: -10px
         font-size: 150px
         line-height: 100px
         color: #417538
         font-weight: 900
         letter-spacing: 6px
+        @media (min-width: 800px)
+          text-indent: -10px
+        @media (max-width: 767px)
+          font-size: 50px
+          line-height: 31px
+          vertical-align: top
+          text-indent: -3px
+          letter-spacing: 2px
     &-icon
       display: block
       height: 45px
+      @media (max-width: 767px)
+        height: 28px
+        img
+          height: 22px
 
 .tank
   background: #000000
   padding-top: 60px
   padding-bottom: 40px
+  @media (max-width: 800px)
+    padding-top: 10px
+    padding-bottom: 20px
+  @media (max-width: 767px)
+    padding-top: 30px
+    padding-bottom: 23px
   &__slogan
     padding-left: 263px
     font-weight: 500
@@ -384,25 +634,54 @@
     line-height: 51px
     background: url(../images/tank.png) no-repeat left top
     letter-spacing: -0.2px
+    @media (max-width: 1025px)
+      background-position-y: 100%
+    @media (max-width: 767px)
+      padding-left: 0
+      padding-top: 94px
+      background-position: 0 0
+      -webkit-background-size: auto 66px
+      background-size: auto 66px
+      font-size: 20px
+      line-height: 30px
     &-title
       font-family: 'DIN Pro'
       font-weight: 900
       font-size: 40px
+      @media (max-width: 767px)
+        font-size: 20px
+        line-height: 30px
+        margin-left: -5px
 
 .big_zoom
   font-family: 'DIN Pro Cond'
   background: #ffffff
   padding-top: 100px
   padding-bottom: 109px
+  @media (max-width: 800px)
+    padding: 50px 0
+  @media (max-width: 767px)
+    padding-top: 30px
+    padding-bottom: 32px
   &__title
-    padding-left: 47px
     text-transform: uppercase
+    @media (min-width: 800px)
+      padding-left: 47px
+    @media (max-width: 767px)
+      padding-left: 00px
     &-big
       font-size: 125px
       line-height: 100px
       color: #000000
       font-weight: 900
       float: left
+      @media (max-width: 800px)
+        font-size: 115px
+      @media (max-width: 767px)
+        font-size: 55px
+        line-height: 40px
+        text-indent: -5px
+        letter-spacing: 1px
     &-right
       float: left
       padding-left: 15px
@@ -411,6 +690,11 @@
       line-height: 53px
       span
         color: #417538
+      @media (max-width: 767px)
+        font-size: 18px
+        line-height: 21px
+        padding-left: 7px
+        letter-spacing: -0.3px
     &-small
       clear: both
       padding-left: 5px
@@ -418,12 +702,22 @@
       font-weight: 500
       padding-top: 8px
       letter-spacing: 0.2px
-      
+      @media (max-width: 767px)
+        padding-left: 0
+        padding-top: 15px
+        margin-left: -2px
+        letter-spacing: -0.4px
+
 .form_block
   font-family: 'DIN Pro Cond'
   background: url(../images/form-bg.jpg) no-repeat center
   padding-top: 98px
   padding-bottom: 103px
+  @media (max-width: 1025px)
+    background-size: auto 100%
+  @media (max-width: 767px)
+    padding-top: 30px
+    padding-bottom: 40px
   &__title
     text-transform: uppercase
     font-size: 65px
@@ -432,6 +726,10 @@
     color: #ffffff
     font-weight: 900
     padding-bottom: 19px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
+      padding-bottom: 15px
   &__desc
     text-transform: uppercase
     color: #ffffff
@@ -439,18 +737,33 @@
     text-align: center
     font-size: 30px
     line-height: 30px
+    @media (max-width: 767px)
+      font-size: 20px
+      line-height: 25px
   &.foot
     background: url(../images/foot-bg.jpg) no-repeat top
     padding-top: 97px
+    @media (max-width: 1025px)
+      background-size: auto 100%
+    @media (max-width: 767px)
+      padding-top: 35px
     .form_block__desc
       line-height: 44px
+      @media (max-width: 767px)
+        line-height: 25px
+        padding-bottom: 0
     .form_block__title
       padding-bottom: 11px
+      @media (max-width: 767px)
+        line-height: 60px
+        padding-bottom: 0px
     .form_block__row
       padding-top: 20px
   &__row
     text-align: center
     padding-top: 27px
+    @media (max-width: 767px)
+      padding-top: 20px
     input
       font-family: 'DIN Pro Cond'
       display: inline-block
@@ -465,9 +778,16 @@
       margin-left: 10px
       margin-right: 10px
       border: #fff solid 1px
+      @media (max-width: 767px)
+        margin-left: -0px
+        margin-right: 0
+        width: 100%
+        margin-bottom: 10px
   &__row_submit
     text-align: center
     padding-top: 21px
+    @media (max-width: 767px)
+      padding-top: 0
     input
       font-family: 'DIN Pro Cond'
       min-width: 230px
@@ -481,11 +801,16 @@
       color: #ffffff
       text-transform: uppercase
       font-size: 22px
+      @media (max-width: 767px)
+        width: 100%
 
 .for_whom
   font-family: 'DIN Pro Cond'
   padding-top: 87px
   padding-bottom: 83px
+  @media (max-width: 767px)
+    padding-top: 19px
+    padding-bottom: 20px
   &__title
     font-family: 'DIN Pro Cond'
     font-size: 65px
@@ -494,6 +819,10 @@
     text-align: center
     font-weight: 900
     padding-bottom: 110px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
+      padding-bottom: 18px
     &-but
       padding-bottom: 0
       font-size: 115px
@@ -502,28 +831,138 @@
       font-weight: 900
       padding-top: 55px
       margin-left: -5px
+      @media (max-width: 1025px)
+        font-size: 70px
+        line-height: normal
+      @media (max-width: 767px)
+        font-size: 50px
+        line-height: 55px
+        padding-top: 22px
   &__item
     display: table
     width: 100%
+    @media (max-width: 767px)
+      display: block
+      position: relative
+      padding-top: 256px
+      padding-bottom: 37px
+      .col-md-3
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+      &:nth-child(3)
+        padding-top: 256px
+      &:nth-child(4)
+        padding-top: 245px
+      &:nth-child(5)
+        padding-top: 215px
+      &:nth-child(6)
+        padding-top: 215px
+        padding-bottom: 0
+        .for_whom__item-title
+          letter-spacing: 1px
+          padding-bottom: 5px
+    .show_svg
+      display: block
+      @media (max-width: 767px)
+        margin-left: auto
+        margin-right: auto
+      svg
+        max-width: 100%
+        height: auto
+      &.svg1
+        max-width: 200px
+        @media (max-width: 767px)
+          max-width: 130px
+      &.svg2
+        max-width: 150px
+        position: relative
+        #Layer_11
+          position: absolute
+          left: 0
+          top: 0
+          transform: translateY(-100px)
+          transition: opacity 0.5s ease-out 0.5s, transform 1s ease-out 0.5s
+        @media (max-width: 767px)
+          max-width: 100px
+      &.svg3
+        max-width: 230px
+        @media (max-width: 767px)
+          max-width: 182px
+      &.svg4
+        max-width: 320px
+        @media (max-width: 767px)
+          max-width: 200px
+      &.svg5
+        max-width: 200px
+        @media (max-width: 767px)
+          max-width: 118px
+      .greensvg
+        transition: opacity 0.5s ease-out 0.5s
+        opacity: 0
+      &.show
+        .greensvg
+          transition: opacity 0.5s ease-out 0.5s
+          opacity: 1
+      &.show.svg1
+        .st1
+          animation: margin2 0.9s infinite
+        .st2
+          animation: margin2 1.7s infinite
+        .st3
+          animation: margin2 2.1s infinite
+        .st4
+          animation: margin2 2.4s infinite
+      &.show.svg2
+        #Layer_11
+          transform: translateY(0px)
+      &.show.svg5
+        .greensvg
+          animation: margin 5s infinite
+      &.show.svg4
+        .op1.greensvg
+          animation: margin 5s infinite
+        .op2.greensvg
+          animation: margin 4s infinite
+        .op3.greensvg
+          animation: margin 3s infinite
+        .op4.greensvg
+          animation: margin 2s infinite
     &-td
       float: none
       height: 435px
       vertical-align: middle
       display: table-cell
+      @media (max-width: 1025px)
+        height: 300px
+      @media (max-width: 767px)
+        display: block
+        height: auto
     &-title
       font-weight: 900
       text-transform: uppercase
       color: #000000
       font-size: 40px
+      @media (max-width: 767px)
+        font-size: 30px
     &-desc
       font-weight: 500
       color: #7b7b7b
       font-size: 30px
       line-height: 45px
+      @media (max-width: 767px)
+        font-size: 18px
+        line-height: 25px
+
 .special
   background: #ffffff
   padding-top: 85px
   padding-bottom: 101px
+  overflow: hidden
+  @media (max-width: 767px)
+    padding-top: 20px
+    padding-bottom: 25px
   &__title
     letter-spacing: -0.1px
     font-size: 40px
@@ -532,12 +971,26 @@
     text-transform: uppercase
     text-align: center
     padding-bottom: 55px
+    @media (max-width: 1025px)
+      font-size: 30px
+      line-height: normal
+    @media (max-width: 767px)
+      font-size: 30px
+      line-height: 40px
+      text-align: left
+      padding-bottom: 18px
+      br
+        display: none
 
 .circle-block
   height: 855px
   position: relative
-  &:after
-    content: ''
+  @media (max-width: 1025px)
+    transform: translate(-13%, 0)
+  @media (max-width: 767px)
+    height: 673px
+    transform: none
+  &__center
     position: absolute
     left: 50%
     top: 50%
@@ -546,6 +999,15 @@
     transform: translate(-67px, -17px)
     display: inline-block
     background: url(../images/center-logo.png) no-repeat center
+    transition: opacity 0.7s ease-out 0.5s
+    opacity: 0
+    &.show
+      transition: opacity 0.7s ease-out 0.5s
+      opacity: 1
+    @media (max-width: 767px)
+      width: 100px
+      background-size: 100px auto
+      transform: translate(-45%, -90%)
   &__item
     position: absolute
     display: inline-block
@@ -557,6 +1019,9 @@
     font-size: 32px
     line-height: 38px
     text-transform: uppercase
+    @media (max-width: 767px)
+      font-size: 18px
+      line-height: 21px
     &:after
       content: ''
       display: inline-block
@@ -575,6 +1040,9 @@
       left: 50%
       top: 50%
       z-index: 1
+    @media (max-width: 767px)
+      &:before, &:after
+        display: none
     span
       +block-center
       z-index: 2
@@ -591,6 +1059,11 @@
         width: 100%
         transform: rotate(102deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 80px
+        height: 80px
+        top: 14px
+        left: 37.1%
     &.c2
       top: 38px
       font-size: 38px
@@ -605,6 +1078,12 @@
         width: 140%
         transform: rotate(137deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 60px
+        height: 60px
+        font-size: 21px
+        top: 465px
+        left: 8%
     &.c3
       top: 168px
       left: 369px
@@ -618,6 +1097,12 @@
         width: 170%
         transform: rotate(140deg)
         transform-origin: -5px 0
+      @media (max-width: 767px)
+        width: 32px
+        height: 32px
+        font-size: 18px
+        top: 108px
+        left: 39.2%
     &.c4
       font-size: 26px
       top: 139px
@@ -632,6 +1117,12 @@
         width: 100%
         transform: rotate(122deg)
         transform-origin: -6px 0
+      @media (max-width: 767px)
+        width: 80px
+        height: 80px
+        font-size: 14px
+        top: 91px
+        left: 60%
     &.c5
       font-size: 38px
       top: 182px
@@ -646,6 +1137,12 @@
         width: 200%
         transform: rotate(159deg)
         transform-origin: 22px 0
+      @media (max-width: 767px)
+        width: 75px
+        height: 75px
+        font-size: 21px
+        top: 267px
+        left: 73%
     &.c6
       font-size: 26px
       top: 103px
@@ -660,13 +1157,24 @@
         width: 100%
         transform: rotate(159deg)
         transform-origin: 3px 3px
-
+      @media (max-width: 767px)
+        width: 80px
+        height: 80px
+        font-size: 14px
+        top: -5px
+        left: 71%
     &.c7
       font-size: 39px
       top: 220px
       left: 185px
       height: 155px
       width: 155px
+      @media (max-width: 767px)
+        width: 88px
+        height: 88px
+        font-size: 21px
+        top: 138px
+        left: 4%
     &.c8
       font-size: 26px
       line-height: 32px
@@ -674,6 +1182,13 @@
       left: 414px
       height: 100px
       width: 100px
+      @media (max-width: 767px)
+        width: 58px
+        height: 58px
+        font-size: 14px
+        line-height: 18px
+        top: 177px
+        left: 48%
     &.c9
       font-size: 29px
       line-height: 32px
@@ -689,6 +1204,13 @@
         width: 130%
         transform: rotate(-16deg)
         transform-origin: 29px 3px
+      @media (max-width: 767px)
+        width: 88px
+        height: 88px
+        font-size: 16px
+        line-height: 18px
+        top: 249px
+        left: 1%
     &.c10
       font-size: 29px
       top: 390px
@@ -703,6 +1225,13 @@
         width: 100%
         transform: rotate(87deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 73px
+        height: 73px
+        font-size: 16px
+        line-height: 18px
+        top: 45px
+        left: 7%
     &.c11
       font-size: 30px
       left: 772px
@@ -717,6 +1246,13 @@
         width: 100%
         transform: rotate(124deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 88px
+        height: 88px
+        font-size: 16px
+        line-height: 18px
+        top: 443px
+        left: 39%
     &.c12
       font-size: 32px
       left: 960px
@@ -731,6 +1267,13 @@
         width: 100%
         transform: rotate(201deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 74px
+        height: 74px
+        font-size: 16px
+        line-height: 20px
+        top: 416px
+        left: 74%
     &.c13
       font-size: 26px
       left: 295px
@@ -745,6 +1288,13 @@
         width: 100%
         transform: rotate(52deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 88px
+        height: 88px
+        font-size: 16px
+        line-height: 18px
+        top: 365px
+        left: 12%
     &.c14
       font-size: 26px
       left: 696px
@@ -759,6 +1309,13 @@
         width: 100%
         transform: rotate(96deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 58px
+        height: 58px
+        font-size: 14px
+        line-height: 16px
+        top: 522px
+        left: 25%
     &.c15
       font-size: 32px
       left: 835px
@@ -769,6 +1326,13 @@
         width: 100%
         transform: rotate(-50deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 88px
+        height: 88px
+        font-size: 18px
+        line-height: 18px
+        top: 580px
+        left: 38%
     &.c16
       font-size: 26px
       left: 525px
@@ -779,6 +1343,13 @@
         width: 200%
         transform: rotate(-33deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 50px
+        height: 50px
+        font-size: 14px
+        line-height: 16px
+        top: 192px
+        left: 76%
     &.c17
       font-size: 26px
       line-height: 32px
@@ -790,6 +1361,13 @@
         width: 100%
         transform: rotate(-64deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 75px
+        height: 75px
+        font-size: 14px
+        line-height: 18px
+        top: 358px
+        left: 52%
     &.c18
       font-size: 30px
       line-height: 40px
@@ -801,10 +1379,20 @@
         width: 100%
         transform: rotate(-161deg)
         transform-origin: 0 0
+      @media (max-width: 767px)
+        width: 82px
+        height: 82px
+        font-size: 16px
+        line-height: 21px
+        top: 510px
+        left: 65%
 
 .why_block
   padding-top: 90px
   padding-bottom: 100px
+  @media (max-width: 767px)
+    padding-top: 20px
+    padding-bottom: 0
   &__title
     font-family: 'DIN Pro Cond'
     font-size: 65px
@@ -814,34 +1402,65 @@
     font-weight: 900
     text-transform: uppercase
     padding-bottom: 31px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
+      padding-bottom: 18px
   &__title-h3
     font-size: 40px
     color: #000000
     font-weight: 900
     text-transform: uppercase
     padding-bottom: 15px
+    @media (max-width: 767px)
+      font-size: 30px
   &__title-h4
     font-size: 30px
     color: #417538
     font-weight: 900
     text-transform: uppercase
     padding-bottom: 21px
+    @media (max-width: 767px)
+      font-size: 20px
+      padding-bottom: 10px
   &__right
     padding-left: 41px
+    @media (max-width: 767px)
+      padding-left: 0
+      padding-right: 0
+      .why_block__title-h3
+        padding-left: 10px
+        padding-bottom: 10px
+
   &__snas
     width: 341px
     float: left
+    @media (max-width: 767px)
+      width: auto
+      float: none
     p
       font-size: 25px
       color: #000000
       font-weight: 500
       padding-bottom: 20px
+      @media (max-width: 767px)
+        font-size: 18px
+        padding-bottom: 22px
+        &:nth-last-child(2)
+          padding-bottom: 0
+        &:nth-last-child(1)
+          padding-bottom: 10px
   &__svas
+    @media (max-width: 767px)
+      .why_block__title-h4
+        padding-bottom: 2px
     p
       font-size: 25px
       color: #000000
       font-weight: 500
       padding-bottom: 20px
+      @media (max-width: 767px)
+        font-size: 18px
   &__table-lid
     td
       border-bottom: #000 solid 1px
@@ -851,31 +1470,56 @@
       text-align: center
       vertical-align: middle
       letter-spacing: -0.2px
+      @media (max-width: 767px)
+        font-size: 18px
+        line-height: 22px
     thead
       .why_block__title-h4
         padding-bottom: 0
       td
         padding-bottom: 11px
+        @media (max-width: 767px)
+          padding-bottom: 7px
     tr
       td:nth-child(1)
         width: 80px
+        @media (max-width: 767px)
+          width: 100px
       td:nth-child(2)
         width: 266px
+        @media (max-width: 767px)
+          width: 200px
     tbody
       td
         padding-top: 13px
         padding-bottom: 19px
+        @media (max-width: 767px)
+          padding-bottom: 12px
     tfoot
       td
         padding-top: 13px
         padding-bottom: 19px
         color: #417538
         font-size: 25px
+        opacity: 0
         &:nth-child(1)
           letter-spacing: -1px
+        @media (max-width: 767px)
+          font-size: 18px
+          padding-bottom: 11px
+      &.show
+        td
+          opacity: 1
+          animation: margin 5s infinite
   &__easier
     padding-top: 37px
     padding-bottom: 45px
+    @media (max-width: 767px)
+      padding-top: 22px
+      padding-bottom: 20px
+      .col-md-12
+        padding-left: 10px
+        padding-right: 10px
     .why_block__title-h4
       padding-bottom: 2px
     p
@@ -883,41 +1527,92 @@
       color: #000000
       font-weight: 500
       padding-bottom: 20px
+      @media (max-width: 767px)
+        padding-bottom: 0
+        font-size: 18px
     &_bl1
       width: 283px
       float: left
+      @media (max-width: 767px)
+        float: none
+        width: auto
+        p
+          padding-top: 5px
     &_bl2
       padding-top: 35px
       width: 370px
       float: left
+      @media (max-width: 767px)
+        padding-top: 10px
+        float: none
+        width: auto
     &_bl3
       padding-top: 35px
       width: 294px
       float: left
+      @media (max-width: 767px)
+        padding-top: 8px
+        float: none
+        width: auto
+        padding-bottom: 7px
     &_bl4
       float: left
+      @media (max-width: 767px)
+        float: none
+        width: auto
+        p
+          padding-top: 10px
   &__serv-list
     padding-top: 28px
+    @media (max-width: 767px)
+      padding-top: 10px
   &__serv-item
     font-weight: 900
     font-size: 30px
     line-height: 40px
     text-align: center
     text-transform: uppercase
+    @media (max-width: 767px)
+      font-size: 18px
+      line-height: 24px
+      padding-bottom: 25px
     &-img
       padding-bottom: 20px
-    &.left
-      padding-right: 60px
-    &.right
-      letter-spacing: -0.1px
-      padding-left: 40px
+      @media (max-width: 767px)
+        padding-bottom: 5px
+        img
+          width: 50px
     &.center
-      padding-right: 33px
+      @media (max-width: 767px)
+        .why_block__serv-item-img
+          padding-bottom: 0
+          img
+            width: 65px
+    &.right
+      @media (max-width: 767px)
+        .why_block__serv-item-img
+          padding-bottom: 0
+          img
+            width: 81px
+    @media (min-width: 800px)
+      &.left
+        padding-right: 60px
+      &.right
+        letter-spacing: -0.1px
+        padding-left: 40px
+      &.center
+        padding-right: 33px
+        @media (max-width: 767px)
+          img
+            width: 65px
 
 .fackti-block
   background: #ffffff
   padding-top: 100px
   padding-bottom: 90px
+  @media (max-width: 767px)
+    padding-top: 17px
+    padding-bottom: 23px
   &__title
     font-family: 'DIN Pro Cond'
     font-size: 65px
@@ -927,6 +1622,10 @@
     font-weight: 900
     text-transform: uppercase
     padding-bottom: 27px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
+      padding-bottom: 10px
   &__slider-nav
     overflow: hidden
     position: relative
@@ -951,30 +1650,53 @@
       display: inline-block
       &.slick-prev
         @include sprite($fackt-prev)
+        @media (max-width: 767px)
+          transform: translate(3px, -6px)
       &.slick-next
         transform: translate(-6px, -11px)
         @include sprite($fackt-next)
+        @media (max-width: 767px)
+          transform: translate(-4px, -5px)
   &__slider-but
     padding-top: 39px
     overflow: hidden
+    @media (max-width: 767px)
+      padding-top: 28px
   &__item-date
     float: left
     text-align: center
     &-no
       padding-right: 45px
+      @media (max-width: 767px)
+        padding-right: 15px
+        padding-left: 15px
     &-yes
       padding-left: 45px
+      @media (max-width: 767px)
+        padding-right: 15px
+        padding-left: 15px
+        padding-top: 22px
     &-img
       height: 87px
+      @media (max-width: 767px)
+        height: 60px
+        img
+          height: 50px
     &-title
       font-weight: 900
       font-size: 50px
       text-transform: uppercase
+      @media (max-width: 767px)
+        font-size: 30px
+        padding-bottom: 5px
     &-desc
       font-weight: 500
       font-size: 22px
       color: #000000
       line-height: 35px
+      @media (max-width: 767px)
+        font-size: 18px
+        line-height: 30px
   &__item-nav
     font-weight: 900
     left: auto !important
@@ -985,10 +1707,15 @@
     padding-left: 20px
     padding-right: 20px
     width: auto !important
+    @media (max-width: 767px)
+      font-size: 40px
 
 .golova_block
   padding-top: 89px
   padding-bottom: 90px
+  @media (max-width: 767px)
+    padding-top: 20px
+    padding-bottom: 20px
   &__title
     font-family: 'DIN Pro Cond'
     font-size: 65px
@@ -998,6 +1725,9 @@
     font-weight: 900
     text-transform: uppercase
     padding-bottom: 15px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
   &__desc
     text-transform: uppercase
     font-size: 30px
@@ -1006,10 +1736,18 @@
     letter-spacing: -0.2px
     text-align: center
     line-height: 45px
+    @media (max-width: 767px)
+      font-size: 20px
+      line-height: 30px
   &__foto
     text-align: center
     padding-top: 36px
     padding-bottom: 31px
+    @media (max-width: 767px)
+      padding-top: 10px
+      padding-bottom: 15px
+      img
+        width: 250px
   &__link
     text-align: center
     font-weight: 500
@@ -1017,17 +1755,30 @@
     font-size: 25px
     p
       padding-bottom: 5px
+    @media (max-width: 767px)
+      font-size: 20px
+
 .monitoring
   background: #ffffff
   padding-top: 100px
   position: relative
   padding-bottom: 90px
   margin-bottom: 75px
+  @media (max-width: 767px)
+    padding-top: 18px
+    padding-bottom: 50px
+    margin-bottom: 58px
   &__title
     padding-bottom: 50px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
+      padding-bottom: 45px
   &__list
     width: 100%
     display: table
+    @media (max-width: 767px)
+      display: block
     li
       padding-left: 55px
       padding-right: 55px
@@ -1036,7 +1787,19 @@
       vertical-align: top
       list-style: none
       height: 90px
+      @media (max-width: 800px)
+        padding-left: 10px
+        padding-right: 10px
+        width: 25%
+        text-align: center
+      @media (max-width: 767px)
+        display: block
+        text-align: center
+        width: 100%
+        height: auto
+        padding-bottom: 40px
   &__other
+    opacity: 0
     background: #417538
     color: #ffffff
     font-weight: 900
@@ -1050,19 +1813,50 @@
     display: block
     max-width: 580px
     transform: translateX(-50%)
+    transition: opacity 0.7s ease-out 0.5s
+    &.show
+      opacity: 1
+    @media (max-width: 800px)
+      padding: 15px 0
+    @media (max-width: 767px)
+      font-size: 20px
+      max-width: 290px
+      line-height: 30px
+      padding: 30px 0
+      bottom: -58px
 
 .cifri
   padding-top: 86px
   padding-bottom: 50px
+  @media (max-width: 767px)
+    padding-top: 20px
+    padding-bottom: 0
   &__title
     padding-bottom: 20px
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
   &__desc
     font-size: 30px
     text-align: center
     color: #000000
+    opacity: 0
     font-weight: 500
     text-transform: uppercase
     padding-bottom: 54px
+    @media (max-width: 767px)
+      font-size: 20px
+      padding-bottom: 21px
+  .col-md-6
+    @media (max-width: 767px)
+      padding-left: 0
+      padding-right: 0
+    &:nth-child(2)
+      .cifri__item
+        padding-top: 85px
+    &:nth-child(3)
+      .cifri__item
+        padding-top: 80px
   &__item
     min-height: 324px
     color: #ffffff
@@ -1072,6 +1866,10 @@
     font-size: 18px
     font-weight: 500
     position: relative
+    @media (max-width: 800px)
+      margin-bottom: 30px
+    @media (max-width: 767px)
+      padding-top: 30px
     &:after
       content: ''
       position: absolute
@@ -1079,24 +1877,58 @@
       transform: translateY(-20px)
       right: -44px
     &.plus:after
+      opacity: 0
       z-index: 5
       display: inline-block
       @include sprite($plus-icon)
+      transition: opacity 0.2s ease-out 0.2s
+      @media (max-width: 767px)
+        top: auto
+        bottom: 0
+        right: auto
+        left: 50%
+        transform: translate(-50%, +80%)
+    &.plus.show_svg.show:after
+      opacity: 1
     &.ravno:after
+      opacity: 0
       z-index: 5
       transform: translateY(-16px)
       right: -41px
       display: inline-block
       @include sprite($ravno-icon)
+      transition: opacity 1s ease-out 2s
+      @media (max-width: 800px)
+        right: auto
+        top: auto
+        bottom: -50px
+        left: -50px
+      @media (max-width: 767px)
+        top: auto
+        bottom: 0
+        right: auto
+        left: 50%
+        transform: translate(+45%, +70%) rotate(90deg)
+        transform-origin: 0 0
+    &.ravno.show_svg.show:after
+      opacity: 1
     &-title
       letter-spacing: 1px
       font-weight: 900
       font-size: 30px
       text-transform: uppercase
       padding-bottom: 41px
+      @media (max-width: 767px)
+        line-height: 35px
+        padding-left: 25px
+        padding-right: 25px
+        padding-bottom: 15px
     p
       padding-bottom: 18px
       text-transform: uppercase
+      @media (max-width: 767px)
+        padding-bottom: 0
+        line-height: 30px
 
 .calc
   padding-top: 60px
@@ -1104,6 +1936,10 @@
   padding-bottom: 102px
   margin-left: auto
   margin-right: auto
+  @media (max-width: 767px)
+    padding-top: 0px
+    margin-top: -10px
+    padding-bottom: 35px
   &:after
     content: ''
     display: table
@@ -1116,16 +1952,51 @@
     text-align: left
     color: #000000
     text-transform: uppercase
+    @media (max-width: 767px)
+      font-size: 50px
+      line-height: 55px
+      text-align: center
+      padding-bottom: 20px
   &__form-left
     float: left
     width: 520px
+    @media (max-width: 800px)
+      float: none
+      width: 100%
+      padding-left: 30px
+      padding-right: 30px
+      padding-bottom: 30px
+    @media (max-width: 767px)
+      padding-left: 15px
+      padding-right: 15px
   &__rez_calc
     float: right
     width: 287px
     height: 412px
+    padding: 38px 35px 0 35px
     background: url(../images/calc-rez-bg.png) no-repeat
+    @media (max-width: 800px)
+      float: none
+      margin-left: auto
+      margin-right: auto
+    &_rez
+      width: 218px
+      height: 82px
+      font-size: 50px
+      line-height: 82px
+      color: #000000
+      font-family: 'DIN Pro'
+      font-weight: 900
+      text-align: center
+      display: block
+      span.rub
+        font-size: 30px
+        font-weight: normal
+        font-style: normal
   &__form_row
     margin-bottom: 20px
+    @media (max-width: 767px)
+      margin-bottom: 10px
     input
       background: #ffffff
       border: #fff solid 1px
@@ -1136,6 +2007,9 @@
       color: #000000
       font-weight: 500
       font-family: 'DIN Pro Cond'
+      @media (max-width: 767px)
+        height: 40px
+        font-size: 18px
   &__form_submit
     input
       width: 100%
@@ -1147,3 +2021,116 @@
       text-transform: uppercase
       font-weight: bold
       font-family: 'DIN Pro Cond'
+      @media (max-width: 767px)
+        height: 50px
+        font-size: 22px
+
+.rub
+  font-family: 'ALS Rubl'
+
+.to-top
+  display: block
+  position: fixed
+  right: 1.5%
+  bottom: 0
+  background: url(../images/to-top.png) no-repeat center top
+  width: 110px
+  height: 160px
+  z-index: 5000
+  cursor: pointer
+  @media (max-width: 800px)
+    width: 55px
+    height: 80px
+    background-size: cover
+    right: 5%
+
+.anime-like
+  animation: marginlike 5s infinite
+  transition: transform 1s ease-out 0.5s
+
+@mixin animation()
+  0%
+    transform: rotate(0deg) translate(-50%, -50%)
+  25%
+    transform: rotate(90deg) translate(-50%, -50%)
+  50%
+    transform: rotate(180deg) translate(-50%, -50%)
+  75%
+    transform: rotate(270deg) translate(-50%, -50%)
+  100%
+    transform: rotate(360deg) translate(-50%, -50%)
+
+@-webkit-keyframes play_button
+  @include animation()
+@-moz-keyframes play_button
+  @include animation()
+@-o-keyframes play_button
+  @include animation()
+@keyframes play_button
+  @include animation()
+
+@mixin marginanimation()
+  0%
+    opacity: 1
+  25%
+    opacity: 0
+  50%
+    opacity: 1
+  75%
+    opacity: 0
+  100%
+    opacity: 1
+
+@-webkit-keyframes margin
+  @include marginanimation()
+@-moz-keyframes margin
+  @include marginanimation()
+@-o-keyframes margin
+  @include marginanimation()
+@keyframes margin
+  @include marginanimation()
+
+
+@mixin marginanimation2()
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@-webkit-keyframes margin2
+  @include marginanimation2()
+@-moz-keyframes margin2
+  @include marginanimation2()
+@-o-keyframes margin2
+  @include marginanimation2()
+@keyframes margin2
+  @include marginanimation2()
+
+@mixin likeanimation()
+  0%
+    transform: translate(0, -30px)
+  25%
+    transform: translate(0, 20px)
+  50%
+    transform: translate(0, -30px)
+  75%
+    transform: translate(0, 20px)
+  100%
+    transform: translate(0, -30px)
+
+@-webkit-keyframes marginlike
+  @include likeanimation()
+@-moz-keyframes marginlike
+  @include likeanimation()
+@-o-keyframes marginlike
+  @include likeanimation()
+@keyframes marginlike
+  @include likeanimation()
+
+.pull-right
+  float: right
+
+label.error
+  display: none !important
+input.error
+  border: #f00 solid 1px

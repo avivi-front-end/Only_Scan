@@ -57,7 +57,7 @@ gulp.task('sass', function () {
     }))
     .pipe(sass({
       includePaths: require('node-bourbon').includePaths,
-      outputStyle: 'compact'
+      outputStyle: 'compressed'
     }))
     .pipe(autoprefixer({
 			browsers: ['last 3 versions'],

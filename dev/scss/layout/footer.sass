@@ -4,6 +4,9 @@
   color: #000000
   padding-top: 80px
   padding-bottom: 115px
+  @media (max-width: 767px)
+    padding-top: 18px
+    padding-bottom: 30px
   &__phone
     font-weight: 900
     text-align: center
@@ -12,17 +15,30 @@
     text-decoration: none
     color: #000000
     padding-bottom: 8px
+    @media (max-width: 767px)
+      font-size: 40px
+      line-height: 50px
+      padding-bottom: 0
   &__desc
     font-size: 30px
     font-weight: 500
     letter-spacing: -0.2px
     text-align: center
     padding-bottom: 31px
+    @media (max-width: 767px)
+      font-size: 20px
+      line-height: 45px
+      padding-bottom: 10px
   &__payment
     padding-bottom: 51px
+    @media (max-width: 767px)
+      padding-bottom: 15px
     ul
       display: table
       width: 100%
+      @media (max-width: 767px)
+        display: block
+        text-align: center
       li
         width: 1%
         list-style: none
@@ -32,3 +48,55 @@
           text-align: left
         &:nth-last-child(1)
           text-align: right
+        @media (max-width: 767px)
+          display: inline-block
+          width: auto
+          padding-left: 10px
+          padding-right: 10px
+          padding-bottom: 15px
+          img
+            height: 20px
+  @media (max-width: 767px)
+    .text-center
+      img
+        max-width: 157px
+
+.modalbgblock
+  position: fixed
+  left: 0
+  top: 0
+  right: 0;
+  bottom: 0
+  background-color: #000
+  opacity: 0.5
+  z-index: 1045
+  display: block
+
+.modal
+  z-index: 1050
+  max-width: 397px
+  width: 80%
+  min-height: 211px
+  text-align: center
+  border-top: #417538 solid 10px
+  background: #ffffff
+  position: fixed
+  display: none
+  top: 75px
+  left: 50%
+  color: #000000
+  font-family: 'DIN Pro Cond'
+  transform: translateX(-50%)
+  .close-modal
+    display: none
+  &__content
+    padding: 34px 25px 35px
+  &__title
+    font-weight: 900
+    text-transform: uppercase
+    font-size: 30px
+    padding-bottom: 3px
+  &__text
+    font-size: 20px
+    line-height: 25px
+    font-weight: 500

@@ -1,8 +1,14 @@
-.header 
+.header
+  position: relative
+  .col-md-7
+    position: static
   &__logotip
     display: block
     padding-top: 29px
     float: left
+    @media (max-width: 767px)
+      float: none
+      text-align: center
   &__slogan
     font-family: 'DIN Pro Cond'
     float: left
@@ -19,6 +25,18 @@
       font-style: italic
       font-size: 15px
       color: #638b5c
+    @media (max-width: 1025px)
+      padding-left: 0
+    @media (max-width: 767px)
+      float: none
+      text-align: center
+      font-size: 29px
+      padding-top: 30px
+      em
+        display: block
+        padding-top: 7px
+        font-size: 20px
+        letter-spacing: 0.5px
   &__menu
     float: right
     ul
@@ -39,6 +57,10 @@
           font-size: 22px
           color: #000000
           font-style: normal
+        @media (max-width: 1025px)
+          padding-left: 20px
+    @media (max-width: 767px)
+      display: none
   &__phone-email
     text-align: right
     padding-top: 15px
@@ -54,3 +76,98 @@
       &_url_email
         padding-top: 4px
         color: #417538
+    @media (max-width: 767px)
+      text-align: center
+
+
+.header-mobile
+  background: #000
+  height: 55px
+  @media (min-width: 767px)
+    display: none
+  &__begin
+    float: right
+    width: 131px
+    text-align: center
+    line-height: 55px
+    background: #417538
+    font-weight: bold
+    color: #ffffff
+    font-size: 22px
+    text-transform: uppercase
+  &__enter
+    float: right
+    width: 131px
+    text-align: center
+    line-height: 55px
+    background: #417538
+    font-weight: bold
+    color: #ffffff
+    font-size: 22px
+    text-transform: uppercase
+    display: none
+  &__bg
+    display: none
+  &__fb
+    display: none
+  &__menu_show
+    float: left
+    margin-left: 15px
+    margin-top: 17px
+    width: 23px
+    height: 22px
+    position: relative
+    cursor: pointer
+    &:after
+      +block-center
+      content: ''
+      @include sprite($menu-icon)
+.show_menu
+  &.header-mobile
+    background: #ffffff
+  .header-mobile__begin
+    display: none
+  .header-mobile__enter
+    display: block
+  .header-mobile__fb
+    display: block
+    float: right
+    width: 40px
+    height: 50px
+    background: url(../images/fb-top.png) no-repeat left center
+  .header-mobile__bg
+    background: #000000
+    opacity: 0.3
+    display: block
+    position: fixed
+    z-index: 1000
+    top: 55px
+    left: 0
+    right: 0
+    bottom: 0
+  .header-mobile__menu_show
+    color: #ffffff
+    &:after
+      @include sprite($menu-close)
+
+.hiden-mobile-menu
+  @media (max-width: 767px)
+    display: none
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    z-index: 1002
+    background: #000000
+    padding: 0 15px
+    ul
+      padding: 15px 0 0px
+      display: block
+      li
+        padding: 0 0 31px
+        display: block
+        float: none
+        &:nth-last-child(1)
+          padding-bottom: 25px
+        a
+          color: #ffffff
