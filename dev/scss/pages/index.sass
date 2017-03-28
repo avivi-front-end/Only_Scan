@@ -263,17 +263,25 @@ input
     background: url(../images/mygik.png) no-repeat 98% 55%
     background-size: 487px auto
     transition: background 5s ease-out 0.5s
+    @media (max-width: 1025px)
+      background: url(../images/mygik.png) no-repeat 98% 200%
+      background-size: 400px auto
+    @media (max-width: 800px)
+      min-height: 100px
+      background: none
+      padding-bottom: 30px
   &.show
     .container
       background: url(../images/mygik.png) no-repeat 98% 55%, url(../images/mozgi.png) no-repeat 80% 9%
       background-size: 487px auto, 120px auto
       transition: background 5s ease-out 0.5s
-    @media (max-width: 1025px)
-      background-size: 40% auto
-    @media (max-width: 800px)
-      min-height: 100px
-      background: none
-      padding-bottom: 30px
+      @media (max-width: 1025px)
+        background: url(../images/mygik.png) no-repeat 98% 200%, url(../images/mozgi.png) no-repeat 79% 23%
+        background-size: 400px auto, 90px auto
+      @media (max-width: 800px)
+        min-height: 100px
+        background: none
+        padding-bottom: 30px
   &__title
     font-family: 'DIN Pro Cond'
     font-weight: 900
